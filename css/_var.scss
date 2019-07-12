@@ -1,0 +1,9 @@
+// 키 컬러
+$kc: #003da6;
+
+$vw-viewport: 720;
+
+@function vw($px) {
+    $vw-context: $vw-viewport * 0.01 * 1px;
+    @return $px / $vw-context * 1vw;
+}

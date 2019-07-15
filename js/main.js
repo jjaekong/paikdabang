@@ -2,6 +2,14 @@
 
     var exchangeTopSwiper, exchangeBottomSwiper, voucherSwiper;
 
+    $('#exchange-tab').on('show.bs.tab', function (e) {
+        $('html, body').addClass('full-height');
+    });
+
+    $('#exchange-tab').on('hide.bs.tab', function (e) {
+        $('html, body').removeClass('full-height');
+    });
+
     $('#exchange-tab').on('shown.bs.tab', function (e) {
         if (exchangeTopSwiper) {
             exchangeTopSwiper.update()
@@ -40,7 +48,5 @@
             });
         }
     });
-
-    $('#exchange-tab').tab('show');
 
 })(jQuery);

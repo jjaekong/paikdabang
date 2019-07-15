@@ -67,24 +67,38 @@
     <!-- 공통 헤더 -->
     <header id="header">
         <a class="btn btn-back" href="index.html"><img src="/images/ico_arrow_left.png" alt="뒤로 가기"></a>
-        <h1>금주의 추천 메뉴</h1>
+        <h1>사랑</h1>
         <span class="empty"></span>
     </header>
     <!-- //공통 헤더 -->
 
     <!-- 메인페이지: recommend 클래스 필요 -->
-    <main id="main" class="recommend">
+    <main id="main" class="promotion">
+
+        <!-- 권종 탭 -->
+        <ul class="nav tabs nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab">5천원</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab">1만원</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab">2만원</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab">3만원</a>
+            </li>
+        </ul>
+        <!-- //권종 탭 -->
 
         <!-- 정렬기(.sorter) -->
         <ul class="nav sorter nav-tabs" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab">판매량 높은 순</a>
+                <a class="nav-link active" data-toggle="tab">신규 등록 순</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab">가격 높은 순</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab">가격 낮은 순</a>
+                <a class="nav-link" data-toggle="tab">판매량 높은 순</a>
             </li>
         </ul>
         <!-- //정렬기 -->

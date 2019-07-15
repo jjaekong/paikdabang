@@ -8,16 +8,41 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/common/bootstrap.min.css">
 
-    <!-- 공통 assets -->
+    <!-- 공통 css -->
     <title>빽다방</title>
     <link href="/css/common/common.css" rel="stylesheet">
-    <!-- //공통 assets -->
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- //공통 css -->
 
-    <!-- 페이지별 assets -->
+    <!-- 공통 js -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/common/jquery-3.3.1.min.js"></script>
+    <script src="/js/common/popper.min.js"></script>
+    <script src="/js/common/bootstrap.min.js"></script>
+    <!-- //공통 js -->
+
+    <!-- 페이지별 css -->
     <!-- 주의: 이 부분은 공통으로 모든 페이지에 추가되는 부분이 아닙니다. -->
-    <link href="/css/main.css" rel="stylesheet">
     <link href="/css/common/swiper.min.css" rel="stylesheet">
-    <!-- //페이지별 assets -->
+    <!-- //페이지별 css -->
+
+    <!-- 페이지별 js -->
+    <!-- 주의: 이 부분은 공통으로 모든 페이지에 추가되는 부분이 아닙니다. -->
+    <script defer src="/js/common/swiper.min.js"></script>
+    <script defer src="/js/main.js"></script>
+    <!-- //페이지별 js -->
+
+    <!-- 개발 js -->
+    <!-- 주의: 개발에 필요한 js는 이 영역에 작성해 주세요 -->
+    <script>
+        (function($) {
+            $(window).on('load', function() {
+                $('#exchange-tab').tab('show');
+            })
+        })(jQuery);
+    </script>
+    <!-- // 개발 js -->
+
 </head>
 <body>
 
@@ -29,7 +54,8 @@
     </header>
     <!-- //공통 헤더 -->
 
-    <main id="main">
+    <!-- 메인페이지: main 클래스 필요 -->
+    <main id="main" class="main">
 
         <!-- 교환권, 금액권 탭 -->
         <ul class="nav tabs nav-tabs" role="tablist">
@@ -45,7 +71,7 @@
         <div class="tab-content">
 
             <!-- 교환권 탭 내용 -->
-            <div class="tab-pane show active" id="exchange" role="tabpanel" aria-labelledby="exchange-tab">
+            <div class="tab-pane" id="exchange" role="tabpanel" aria-labelledby="exchange-tab">
                 
                 <!-- 교환권 상단 배너 -->
                 <div class="top-banner swiper-container">
@@ -152,7 +178,7 @@
                 <!-- 빽's 메뉴판 -->
                 <section class="section category">
                     <header class="section-titlebar">
-                        <a href="#">
+                        <a href="paiksmenu_list.html">
                             <h4 class="section-title">빽's 메뉴판</h4>
                             <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
                         </a>
@@ -255,7 +281,7 @@
                 <!-- 기프트샵 베스트5 -->
                 <section class="section top5">
                     <header class="section-titlebar">
-                        <a href="#">
+                        <a href="promotion_list.html">
                             <h4 class="section-title">기프트샵 베스트5</h4>
                             <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
                         </a>
@@ -329,246 +355,235 @@
 
                 <!-- 축하 -->
                 <section class="section celebration">
-                        <header class="section-titlebar">
-                            <a href="#">
-                                <h4 class="section-title">축하</h4>
-                                <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
-                            </a>
-                        </header>
-                        <div class="product-list">
-                            <ul>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">커피</h6>
-                                            <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                            <p class="product-price">3,500원 <s>4,000원</s></p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">빽스치노</h6>
-                                            <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
-                                            <p class="product-price">4,500원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">커피</h6>
-                                            <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                            <p class="product-price">3,500원 <s>4,000원</s></p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">빽스치노</h6>
-                                            <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
-                                            <p class="product-price">4,500원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">커피</h6>
-                                            <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                            <p class="product-price">3,500원 <s>4,000원</s></p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!-- //축하 -->
-
-                    <!-- 사랑 -->
-                    <section class="section love">
-                        <header class="section-titlebar">
-                            <a href="#">
-                                <h4 class="section-title">사랑</h4>
-                                <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
-                            </a>
-                        </header>
-                        <div class="product-list">
-                            <ul>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">커피</h6>
-                                            <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                            <p class="product-price">3,500원 <s>4,000원</s></p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">빽스치노</h6>
-                                            <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
-                                            <p class="product-price">4,500원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">커피</h6>
-                                            <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                            <p class="product-price">3,500원 <s>4,000원</s></p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">빽스치노</h6>
-                                            <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
-                                            <p class="product-price">4,500원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="product-item" href="#">
-                                        <div class="product-image">
-                                            <img src="/images/img_product_dummy.jpg">
-                                        </div>
-                                        <div class="product-body">
-                                            <h6 class="product-category">커피</h6>
-                                            <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                            <p class="product-price">3,500원 <s>4,000원</s></p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!-- //사랑 -->
-
-                    <!-- 기념 -->
-                    <section class="section love">
-                            <header class="section-titlebar">
-                                <a href="#">
-                                    <h4 class="section-title">기념</h4>
-                                    <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
+                    <header class="section-titlebar">
+                        <a href="promotion_list.html">
+                            <h4 class="section-title">축하</h4>
+                            <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
+                        </a>
+                    </header>
+                    <div class="product-list">
+                        <ul>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
                                 </a>
-                            </header>
-                            <div class="product-list">
-                                <ul>
-                                    <li>
-                                        <a class="product-item" href="#">
-                                            <div class="product-image">
-                                                <img src="/images/img_product_dummy.jpg">
-                                            </div>
-                                            <div class="product-body">
-                                                <h6 class="product-category">커피</h6>
-                                                <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                                <p class="product-price">3,500원 <s>4,000원</s></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="product-item" href="#">
-                                            <div class="product-image">
-                                                <img src="/images/img_product_dummy.jpg">
-                                            </div>
-                                            <div class="product-body">
-                                                <h6 class="product-category">빽스치노</h6>
-                                                <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
-                                                <p class="product-price">4,500원</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="product-item" href="#">
-                                            <div class="product-image">
-                                                <img src="/images/img_product_dummy.jpg">
-                                            </div>
-                                            <div class="product-body">
-                                                <h6 class="product-category">커피</h6>
-                                                <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                                <p class="product-price">3,500원 <s>4,000원</s></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="product-item" href="#">
-                                            <div class="product-image">
-                                                <img src="/images/img_product_dummy.jpg">
-                                            </div>
-                                            <div class="product-body">
-                                                <h6 class="product-category">빽스치노</h6>
-                                                <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
-                                                <p class="product-price">4,500원</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="product-item" href="#">
-                                            <div class="product-image">
-                                                <img src="/images/img_product_dummy.jpg">
-                                            </div>
-                                            <div class="product-body">
-                                                <h6 class="product-category">커피</h6>
-                                                <h4 class="product-title">딸기크림라떼 (ICED)</h4>
-                                                <p class="product-price">3,500원 <s>4,000원</s></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <!-- //기념 -->
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">빽스치노</h6>
+                                        <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
+                                        <p class="product-price">4,500원</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">빽스치노</h6>
+                                        <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
+                                        <p class="product-price">4,500원</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- //축하 -->
+
+                <!-- 사랑 -->
+                <section class="section love">
+                    <header class="section-titlebar">
+                        <a href="promotion_list.html">
+                            <h4 class="section-title">사랑</h4>
+                            <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
+                        </a>
+                    </header>
+                    <div class="product-list">
+                        <ul>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">빽스치노</h6>
+                                        <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
+                                        <p class="product-price">4,500원</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">빽스치노</h6>
+                                        <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
+                                        <p class="product-price">4,500원</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- //사랑 -->
+
+                <!-- 기념 -->
+                <section class="section love">
+                    <header class="section-titlebar">
+                        <a href="promotion_list.html">
+                            <h4 class="section-title">기념</h4>
+                            <img class="section-more" src="/images/ico_arrow_right.png" alt="더 보기">
+                        </a>
+                    </header>
+                    <div class="product-list">
+                        <ul>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">빽스치노</h6>
+                                        <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
+                                        <p class="product-price">4,500원</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">빽스치노</h6>
+                                        <h4 class="product-title">베리크런치 빽스치노(소프트)</h4>
+                                        <p class="product-price">4,500원</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="product-item" href="#">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <div class="product-body">
+                                        <h6 class="product-category">커피</h6>
+                                        <h4 class="product-title">딸기크림라떼 (ICED)</h4>
+                                        <p class="product-price">3,500원 <s>4,000원</s></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- //기념 -->
 
             </div>
             <!-- //금액권 탭 내용 -->
 
         </div>
+
     </main>
 
-    <!-- 공통 js -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/js/common/jquery-3.3.1.min.js"></script>
-    <script src="/js/common/popper.min.js"></script>
-    <script src="/js/common/bootstrap.min.js"></script>
-    <!-- //공통 js -->
-
-    <!-- 페이지별 js -->
-    <!-- 주의: 이 부분은 공통으로 모든 페이지에 추가되는 부분이 아닙니다. -->
-    <script defer src="/js/common/swiper.min.js"></script>
-    <script defer src="/js/main.js"></script>
-    <!-- //페이지별 js -->
 </body>
 </html>

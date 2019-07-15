@@ -5,6 +5,10 @@ html, body {
     position: relative;
     margin: 0;
     padding: 0;
+}
+
+html.full-height,
+body.full-height {
     width: 100%;
     height: 100%;
 }
@@ -12,9 +16,13 @@ html, body {
 body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: vw(26px);
+    background: #e9e9e9;
 }
 
 #header {
+    z-index: 11;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     background: $kc;
@@ -52,6 +60,9 @@ body {
 
 #main {
     .tabs {
+        z-index: 10;
+        position: sticky;
+        top: vw(124px);
         height: vw(108px);
         li {
             flex: 1;
@@ -67,6 +78,7 @@ body {
                 color: #666;
                 background: #fff;
                 border-bottom: vw(2px) solid #e9e9e9;
+                border-radius: 0;
                 &.active {
                     border-bottom: vw(4px) solid $kc;
                     color: $kc;
@@ -81,15 +93,19 @@ body {
         overflow: hidden;
         text-decoration: none;
         border-radius: vw(35px);
+        background: #fff;
         .product-body {
-            padding: 0 vw(35px) vw(35px) vw(35px);
-            height: vw(200px);
+            padding: vw(15px) vw(30px) vw(30px) vw(30px);
+            height: vw(215px);
         }
         .product-image {
-            width: 100%;
-            height: vw(175px);
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: vw(270px);
+            height: vw(170px);
             img {
-                width: 100%;
+                height: 100%;
             }
         }
         .product-category {
@@ -129,11 +145,13 @@ body {
         height: vw(60px);
         border-radius: 50%;
         background: var(--light);
+        line-height:  vw(22px);
         b {
             font-size: vw(22px);
             color: #fff;
         }
         small {
+            margin-right: vw(-5px);
             margin-left: vw(5px);
             font-size: vw(14px);
             color: rgba(#fff, .6);
@@ -143,6 +161,8 @@ body {
         }
     }
     .sorter {
+        margin-top: vw(60px);
+        margin-bottom: vw(60px);
         margin-left: vw(30px);
         margin-right: vw(30px);
         height: vw(76px);
@@ -162,12 +182,25 @@ body {
                 color: #666;
                 font-size: vw(24px);
                 &.active {
-                    margin-top: vw(-2px);
+                    margin-top: vw(-3px);
                     height: vw(80px);
                     background: $kc;
                     color: #fff;
                     border-radius: vw(38px);
                 }
+            }
+        }
+    }
+    .category-tabs {
+        z-index: 10;
+        position: sticky;
+        top: vw(124px);
+        overflow: auto;
+        width: 100%;
+        .tabs {
+            width: 200%;
+            li {
+                width: 33.33333334%;
             }
         }
     }

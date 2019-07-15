@@ -3,6 +3,10 @@ html, body {
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+html.full-height,
+body.full-height {
   width: 100%;
   height: 100%;
 }
@@ -10,9 +14,13 @@ html, body {
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 3.6111111111vw;
+  background: #e9e9e9;
 }
 
 #header {
+  z-index: 11;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   background: #003da6;
@@ -45,6 +53,9 @@ body {
 }
 
 #main .tabs {
+  z-index: 10;
+  position: sticky;
+  top: 17.2222222222vw;
   height: 15vw;
 }
 #main .tabs li {
@@ -62,6 +73,7 @@ body {
   color: #666;
   background: #fff;
   border-bottom: 0.2777777778vw solid #e9e9e9;
+  border-radius: 0;
 }
 #main .tabs li a.active {
   border-bottom: 0.5555555556vw solid #003da6;
@@ -74,17 +86,21 @@ body {
   overflow: hidden;
   text-decoration: none;
   border-radius: 4.8611111111vw;
+  background: #fff;
 }
 #main .product-item .product-body {
-  padding: 0 4.8611111111vw 4.8611111111vw 4.8611111111vw;
-  height: 27.7777777778vw;
+  padding: 2.0833333333vw 4.1666666667vw 4.1666666667vw 4.1666666667vw;
+  height: 29.8611111111vw;
 }
 #main .product-item .product-image {
-  width: 100%;
-  height: 24.3055555556vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 37.5vw;
+  height: 23.6111111111vw;
 }
 #main .product-item .product-image img {
-  width: 100%;
+  height: 100%;
 }
 #main .product-item .product-category {
   margin: 0;
@@ -122,12 +138,14 @@ body {
   height: 8.3333333333vw;
   border-radius: 50%;
   background: var(--light);
+  line-height: 3.0555555556vw;
 }
 #main .flag b {
   font-size: 3.0555555556vw;
   color: #fff;
 }
 #main .flag small {
+  margin-right: -0.6944444444vw;
   margin-left: 0.6944444444vw;
   font-size: 1.9444444444vw;
   color: rgba(255, 255, 255, 0.6);
@@ -136,6 +154,8 @@ body {
   background: #f36c58;
 }
 #main .sorter {
+  margin-top: 8.3333333333vw;
+  margin-bottom: 8.3333333333vw;
   margin-left: 4.1666666667vw;
   margin-right: 4.1666666667vw;
   height: 10.5555555556vw;
@@ -158,11 +178,24 @@ body {
   font-size: 3.3333333333vw;
 }
 #main .sorter li a.active {
-  margin-top: -0.2777777778vw;
+  margin-top: -0.4166666667vw;
   height: 11.1111111111vw;
   background: #003da6;
   color: #fff;
   border-radius: 5.2777777778vw;
+}
+#main .category-tabs {
+  z-index: 10;
+  position: sticky;
+  top: 17.2222222222vw;
+  overflow: auto;
+  width: 100%;
+}
+#main .category-tabs .tabs {
+  width: 200%;
+}
+#main .category-tabs .tabs li {
+  width: 33.33333334%;
 }
 
 /*# sourceMappingURL=common.css.map */

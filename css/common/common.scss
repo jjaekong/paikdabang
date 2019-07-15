@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import 'var';
 
 html, body {
@@ -27,7 +28,7 @@ body {
         flex: 1;
         text-align: center;
     }
-    .btn {
+    .btn, .empty {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -82,9 +83,11 @@ body {
         border-radius: vw(35px);
         .product-body {
             padding: 0 vw(35px) vw(35px) vw(35px);
+            height: vw(200px);
         }
         .product-image {
             width: 100%;
+            height: vw(175px);
             img {
                 width: 100%;
             }
@@ -98,6 +101,7 @@ body {
             margin: vw(20px) 0 0;
             font-size: vw(26px);
             line-height: vw(30px);
+            min-height: vw(60px);
             color: #333;
         }
         .product-price {
@@ -126,16 +130,45 @@ body {
         border-radius: 50%;
         background: var(--light);
         b {
-            font-size: vw(26px);
+            font-size: vw(22px);
             color: #fff;
         }
         small {
             margin-left: vw(5px);
-            font-size: vw(18px);
+            font-size: vw(14px);
             color: rgba(#fff, .6);
         }
         &.pink {
             background: #f36c58;
+        }
+    }
+    .sorter {
+        margin-left: vw(30px);
+        margin-right: vw(30px);
+        height: vw(76px);
+        border-radius: vw(38px);
+        background-color: #fff;
+        li {
+            flex: 1;
+            margin: 0;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                border: 0;
+                color: #666;
+                font-size: vw(24px);
+                &.active {
+                    margin-top: vw(-2px);
+                    height: vw(80px);
+                    background: $kc;
+                    color: #fff;
+                    border-radius: vw(38px);
+                }
+            }
         }
     }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
 html, body {
   position: relative;
   margin: 0;
@@ -26,7 +27,7 @@ body {
   flex: 1;
   text-align: center;
 }
-#header .btn {
+#header .btn, #header .empty {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,9 +77,11 @@ body {
 }
 #main .product-item .product-body {
   padding: 0 4.8611111111vw 4.8611111111vw 4.8611111111vw;
+  height: 27.7777777778vw;
 }
 #main .product-item .product-image {
   width: 100%;
+  height: 24.3055555556vw;
 }
 #main .product-item .product-image img {
   width: 100%;
@@ -92,6 +95,7 @@ body {
   margin: 2.7777777778vw 0 0;
   font-size: 3.6111111111vw;
   line-height: 4.1666666667vw;
+  min-height: 8.3333333333vw;
   color: #333;
 }
 #main .product-item .product-price {
@@ -120,16 +124,45 @@ body {
   background: var(--light);
 }
 #main .flag b {
-  font-size: 3.6111111111vw;
+  font-size: 3.0555555556vw;
   color: #fff;
 }
 #main .flag small {
   margin-left: 0.6944444444vw;
-  font-size: 2.5vw;
+  font-size: 1.9444444444vw;
   color: rgba(255, 255, 255, 0.6);
 }
 #main .flag.pink {
   background: #f36c58;
+}
+#main .sorter {
+  margin-left: 4.1666666667vw;
+  margin-right: 4.1666666667vw;
+  height: 10.5555555556vw;
+  border-radius: 5.2777777778vw;
+  background-color: #fff;
+}
+#main .sorter li {
+  flex: 1;
+  margin: 0;
+}
+#main .sorter li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  border: 0;
+  color: #666;
+  font-size: 3.3333333333vw;
+}
+#main .sorter li a.active {
+  margin-top: -0.2777777778vw;
+  height: 11.1111111111vw;
+  background: #003da6;
+  color: #fff;
+  border-radius: 5.2777777778vw;
 }
 
 /*# sourceMappingURL=common.css.map */

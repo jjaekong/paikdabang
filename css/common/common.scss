@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean');
 @import 'var';
 
 html, body {
@@ -155,6 +155,7 @@ body {
             margin-left: vw(5px);
             font-size: vw(14px);
             color: rgba(#fff, .6);
+            font-weight: 300;
         }
         &.pink {
             background: #f36c58;

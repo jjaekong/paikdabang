@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean");
 html, body {
   position: relative;
   margin: 0;
@@ -149,6 +149,7 @@ body {
   margin-left: 0.6944444444vw;
   font-size: 1.9444444444vw;
   color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
 }
 #main .flag.pink {
   background: #f36c58;

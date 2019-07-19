@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/common/bootstrap.min.css">
+
+    <!-- 공통 css -->
+    <title>빽다방</title>
+    <link href="/css/common/common.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- //공통 css -->
+
+    <!-- 공통 js -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/common/jquery-3.3.1.min.js"></script>
+    <script src="/js/common/popper.min.js"></script>
+    <script src="/js/common/bootstrap.min.js"></script>
+    <!-- //공통 js -->
+
+    <!-- 페이지별 js -->
+    <!-- 주의: 이 부분은 공통으로 모든 페이지에 추가되는 부분이 아닙니다. -->
+    <script defer src="/js/common/swiper.min.js"></script>
+    <script defer src="/js/main.js"></script>
+    <!-- //페이지별 js -->
+
+    <!-- 개발 js -->
+    <!-- 주의: 개발에 필요한 js는 이 영역에 작성해 주세요 -->
+    <script>
+        (function($) {
+            $(window).on('scroll', function() {
+                var scrollHeight = $(document).height();
+                var scrollPosition = $(window).height() + $(window).scrollTop();
+                if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                    var historyItem = '<li>';
+                    historyItem += '<a class="history-item" href="history_details.html">';
+                    historyItem += '<div class="history-image">';
+                    historyItem += '<img src="/images/img_product_dummy2.jpg">';
+                    historyItem += '</div>';
+                    historyItem += '<div class="history-body">';
+                    historyItem += '<h6 class="history-category">선물하기</h6>';
+                    historyItem += '<h4 class="history-title">플레인 요거트 스무디</h4>';
+                    historyItem += '<div class="history-phone">010-42**-52**</div>';
+                    historyItem += '<div class="history-expire">';
+                    historyItem += '2019년 10월 12일까지 <span class="d-day">D-13</span>';
+                    historyItem += '</div>';
+                    historyItem += '<div class="history-price">';
+                    historyItem += '<span>3개</span> <b>9,000원</b>';
+                    historyItem += '</div>';
+                    historyItem += '</div>';
+                    historyItem += '</a>';
+                    historyItem += '</li>';
+                    $('.history-list ul').append(historyItem);
+                    $('.history-list ul').append(historyItem);
+                    $('.history-list ul').append(historyItem);
+                    $('.history-list ul').append(historyItem);
+                    $('.history-list ul').append(historyItem);
+                }
+            });
+        })(jQuery);
+    </script>
+    <!-- // 개발 js -->
+
+</head>
+<body>
+
+    <!-- 공통 헤더 -->
+    <header id="header">
+        <a class="btn btn-back" href="/"><img src="/images/ico_arrow_left.png" alt="뒤로 가기"></a>
+        <h1>기프트샵 구매내역</h1>
+        <span class="empty"></span>
+    </header>
+    <!-- //공통 헤더 -->
+
+    <!-- 구매내역: history 클래스 필요 -->
+    <main id="main" class="history">
+
+        <ul class="nav sorter nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab">기프트샵</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab">금액권</a>
+            </li>
+        </ul>
+
+        <div class="history-list">
+            <ul>
+                <li>
+                    <a class="history-item" href="history_details.html">
+                        <div class="history-image">
+                            <img src="/images/img_product_dummy2.jpg">
+                        </div>
+                        <div class="history-body">
+                            <h6 class="history-category">선물하기</h6>
+                            <h4 class="history-title">플레인 요거트 스무디</h4>
+                            <div class="history-phone">010-42**-52**</div>
+                            <div class="history-expire">
+                                2019년 10월 12일까지 <span class="d-day">D-13</span>
+                            </div>
+                            <div class="history-price">
+                                <span>3개</span> <b>9,000원</b>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="history-item" href="history_details.html">
+                        <div class="history-image">
+                            <img src="/images/img_product_dummy2.jpg">
+                        </div>
+                        <div class="history-body">
+                            <h6 class="history-category">선물하기</h6>
+                            <h4 class="history-title">플레인 요거트 스무디</h4>
+                            <div class="history-phone">010-42**-52**</div>
+                            <div class="history-expire">
+                                2019년 10월 12일까지 <span class="d-day">D-13</span>
+                            </div>
+                            <div class="history-price">
+                                <span>3개</span> <b>9,000원</b>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="history-item" href="history_details.html">
+                        <div class="history-image">
+                            <img src="/images/img_product_dummy2.jpg">
+                        </div>
+                        <div class="history-body">
+                            <h6 class="history-category">선물하기</h6>
+                            <h4 class="history-title">플레인 요거트 스무디</h4>
+                            <div class="history-phone">010-42**-52**</div>
+                            <div class="history-expire">
+                                2019년 10월 12일까지 <span class="d-day">D-13</span>
+                            </div>
+                            <div class="history-price">
+                                <span>3개</span> <b>9,000원</b>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="history-item" href="history_details.html">
+                        <div class="history-image">
+                            <img src="/images/img_product_dummy2.jpg">
+                        </div>
+                        <div class="history-body">
+                            <h6 class="history-category">선물하기</h6>
+                            <h4 class="history-title">플레인 요거트 스무디</h4>
+                            <div class="history-phone">010-42**-52**</div>
+                            <div class="history-expire">
+                                2019년 10월 12일까지 <span class="d-day">D-13</span>
+                            </div>
+                            <div class="history-price">
+                                <span>3개</span> <b>9,000원</b>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/common/bootstrap.min.css">
+
+    <!-- 공통 css -->
+    <title>빽다방</title>
+    <link href="/css/common/common.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- //공통 css -->
+
+    <!-- 페이지 css -->
+    <style>
+        body { background: #fff; }
+    </style> 
+    <!-- //페이지 css -->
+
+    <!-- 공통 js -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/common/jquery-3.3.1.min.js"></script>
+    <script src="/js/common/popper.min.js"></script>
+    <script src="/js/common/bootstrap.min.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- //공통 js -->
+
+    <!-- 개발 js -->
+    <!-- 주의: 개발에 필요한 js는 이 영역에 작성해 주세요 -->
+    <script>
+        (function($) {
+            // 수량 조절 버튼
+            $(document).on('click', '.btn-minus', function() {
+                document.getElementById('quantity').stepDown();
+            });
+            $(document).on('click', '.btn-plus', function() {
+                document.getElementById('quantity').stepUp();
+            });
+
+            // 연락처 초기화 버튼
+            $(document).on('click', '.btn-delete-contact', function() {
+                $('.btn-contact').show();
+                $('.form-control.name').val('').removeAttr('readonly');
+                $('.form-control.phone').val('').removeAttr('readonly');
+                $(this).parent().hide();
+            });
+
+            // 메시지 바이트 수 체크, 60바이트 이상일 경우 입력 제한
+            $(document).on('keyup', '.form-control.text', function() {
+                var bytes = getBytes($(this))
+                $('#message-bytes').text(bytes)
+                if (bytes > 60) {
+                    $(this).val(
+                        cutByLen($(this).val(), 60)
+                    )
+                }
+            });
+            
+            // 연락처 선택 시, 선택한 값(이름) 입력
+            $(document).on('click', '#modal-select-contact .btn-ok', function (e) {
+                if ($('input[name="contact"]:checked').length > 0) {
+                    var username = $('input[name="contact"]:checked').siblings('.info').find('.username').text();
+                    $('.message .form-control.name').val(username);
+                    $('.message .form-control.phone').val('010-1234-5678'); // 임의의 값입니다.
+                    $('.message .form-control.name').prop('readonly', true);
+                    $('.message .form-control.phone').prop('readonly', true);
+                    $('.message-reciever .message-col').eq(2).show();
+                    $('.message .btn-contact').hide();
+                }
+                $('#modal-select-contact').modal('hide');
+            });
+        })(jQuery);
+    </script>
+    <!-- // 개발 js -->
+
+</head>
+<body>
+
+    <!-- 공통 헤더 -->
+    <header id="header">
+        <a class="btn btn-back" href="index.html"><img src="/images/ico_arrow_left.png" alt="뒤로 가기"></a>
+        <h1>선물하기</h1>
+        <span class="empty"></span>
+    </header>
+    <!-- //공통 헤더 -->
+
+    <!-- 선물하기: gift 클래스 필요 -->
+    <main id="main" class="gift">
+
+        <!-- 쿠폰 영역(수량 선택) -->
+        <section class="confirm">
+            <div class="confirm-wrapper">
+                <div class="confirm-info">
+                    <div class="confirm-image">
+                        <img src="/images/img_product_dummy2.jpg">
+                    </div>
+                    <div class="confirm-title-area">
+                        <h4 class="confirm-title">베리크런치 빽스치노 (SOFT)</h4>
+                        <p class="confirm-price">4,100원 <s>4,500원</s></p>
+                    </div>
+                </div>
+                <div class="confirm-counter">
+                    <div class="confirm-counter-wrapper">
+                        <div class="counter-controls">
+                            <div class="control-title">구매수량</div>
+                            <div class="control-body">
+                                <button type="button" class="btn btn-link btn-minus">
+                                    <img src="/images/ico_minus.gif" alt="빼기">
+                                </button>
+                                <input class="control-number" id="quantity" type="number" min="1" max="100" value="1" readonly>
+                                <button type="button" class="btn btn-link btn-plus">
+                                    <img src="/images/ico_plus.gif" alt="더하기">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="counter-help">
+                            상품은 프로모션 상품으로 1인당 최대 구매 가능 갯수는 2개입니다
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //쿠폰 영역(수량 선택) -->
+
+        <!-- 메시지 -->
+        <section class="message">
+            <div class="message-wrapper">
+                <div class="message-row message-header">
+                    <h4>받는 사람</h4>
+                    <button class="btn btn-link btn-contact" style="display: none;" data-toggle="modal" data-target="#modal-select-contact">
+                        <img src="/images/ico_plus_circle.png">
+                        연락처 가져오기
+                    </button>
+                </div>
+                <div class="message-row message-reciever">
+                    <!-- 연락처 선택 시, readonly 속성을 추가해 주세요 -->
+                    <div class="message-col">
+                        <input type="text" class="form-control name" placeholder="이름" required readonly value="김옴니">
+                    </div>
+                    <!-- 연락처 선택 시, readonly 속성을 추가해 주세요 -->
+                    <div class="message-col">
+                        <input type="text" class="form-control phone" placeholder="연락처" required readonly value="010-4744-5544">
+                    </div>
+                    <div class="message-col">
+                        <button type="button" class="btn btn-link btn-delete-contact">
+                            <img src="/images/ico_close.png" alt="삭제">
+                        </button>
+                    </div>
+                </div>
+                <div class="message-row message-body">
+                    <textarea class="form-control text" placeholder="빽다방 선물이 도착했어요." required></textarea>
+                </div>
+                <div class="message-row message-bytes">
+                    <i id="message-bytes">0</i>/60 bytes
+                </div>
+            </div>
+        </section>
+        <!-- //메시지 -->
+
+        <!-- 결제정보 -->
+        <div class="pay-info">
+            <dl>
+                <dt>상품가</dt>
+                <dd><s>5,000원</s></dd>
+            </dl>
+            <dl>
+                <dt>판매가</dt>
+                <dd>4,000원</dd>
+            </dl>
+            <dl>
+                <dt>수량</dt>
+                <dd>3개</dd>
+            </dl>
+            <dl>
+                <dt>총 상품금액</dt>
+                <dd><b>12,000개</b></dd>
+            </dl>
+            <dl>
+                <dt>최종 결제 금액</dt>
+                <dd><i>12,000개</i></dd>
+            </dl>
+        </div>
+        <!-- //결제정보 -->
+
+        <!-- 약관 동의 -->
+        <div class="agree">
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" class="sr-only"><span></span>
+                        개인정보 수집 및 이용동의
+                    </label>
+                    <button class="btn btn-more-privacy" type="button">상세내용보기</button>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="sr-only"><span></span>
+                        구매조건을 확인하였으며 결제 진행에 동의합니다.
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!-- // 약관 동의 -->
+
+        <!-- 하단 버튼 영역 -->
+        <div class="action">
+            <button class="btn btn-card" type="button">신용카드</button>
+            <button class="btn btn-phone" type="button">휴대폰결제</button>
+            <!-- 페이코 결제는 1차 제외 --> 
+            <!-- <button class="btn btn-payco" type="button">페이코결제</button> -->
+        </div>
+        <!-- //하단 버튼 영역 -->
+
+        <!-- 주의: 이 영역은 구매 완료 페이지 확인 때문에 넣어놓은 코드입니다. 개발 시 삭제해 주세요.-->
+        <a href="gift_done.html">구매완료</a>
+
+    </main>
+
+    <!-- 연락처 선택 레이어 팝업 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-select-contact">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">선물 받으실 분을 선택해 주세요.</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="help">
+                        입력하신 번호에 해당하는<br>
+                        빽다방 회원이 있습니다.<br>
+                        선물 받으실 분을 선택해주세요.                            
+                    </p>
+                    <div class="contact-table" role="table">
+                        <div class="contact-header" role="rowgroup">
+                            <div role="row">
+                                <span class="name" role="columnheader">
+                                    이름/메일
+                                </span>
+                                <span class="nickname" role="columnheader">
+                                    닉네임
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contact-body" role="rowgroup">
+                            <label role="row">
+                                <span class="name" role="cell">
+                                    <input type="radio" name="contact" class="sr-only">
+                                    <span class="check"></span>
+                                    <span class="info" role="cell">
+                                        <span class="username">김루*</span>
+                                        <small class="email">numbero**@naver.com</small>
+                                    </span>
+                                </span>
+                                <span class="nickname" role="cell">
+                                    판다야놀자요
+                                </span>
+                            </label>
+                            <label role="row">
+                                <span class="name" role="cell">
+                                    <input type="radio" name="contact" class="sr-only">
+                                    <span class="check"></span>
+                                    <span class="info" role="cell">
+                                        <span class="username">김루*</span>
+                                        <small class="email">numbero**@naver.com</small>
+                                    </span>
+                                </span>
+                                <span class="nickname" role="cell">
+                                    판다야놀자요
+                                </span>
+                            </label>
+                            <label role="row">
+                                <span class="name" role="cell">
+                                    <input type="radio" name="contact" class="sr-only">
+                                    <span class="check"></span>
+                                    <span class="info" role="cell">
+                                        <span class="username">김루*</span>
+                                        <small class="email">numbero**@naver.com</small>
+                                    </span>
+                                </span>
+                                <span class="nickname" role="cell">
+                                    판다야놀자요
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-ok">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //연락처 선택 레이어 팝업 -->
+
+</body>
+</html>

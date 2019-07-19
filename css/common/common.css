@@ -44,9 +44,13 @@ body {
   border: 0;
   padding: 0;
   outline: 0;
+  box-shadow: none;
 }
 #header .btn-back img {
   width: 3.1944444444vw;
+}
+#header .btn-close img {
+  width: 5.9722222222vw;
 }
 #header .btn-history img {
   width: 5.9722222222vw;

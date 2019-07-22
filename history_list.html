@@ -32,9 +32,7 @@
     <script>
         (function($) {
             $(window).on('scroll', function() {
-                var scrollHeight = $(document).height();
-                var scrollPosition = $(window).height() + $(window).scrollTop();
-                if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                if ($(window).outerHeight() + Math.ceil($(window).scrollTop()) >= $(document).height()) {
                     var historyItem = '<li>';
                     historyItem += '<a class="history-item" href="history_details.html">';
                     historyItem += '<div class="history-image">';

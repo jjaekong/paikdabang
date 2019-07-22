@@ -49,13 +49,14 @@
             });
 
             // 메시지 바이트 수 체크, 60바이트 이상일 경우 입력 제한
-            $(document).on('keyup', '.form-control.text', function() {
+            $(document).on('keyup change input', '.form-control.text', function() {
                 var bytes = getBytes($(this))
                 $('#message-bytes').text(bytes)
                 if (bytes > 60) {
                     $(this).val(
                         cutByLen($(this).val(), 60)
                     )
+                    return false;
                 }
             });
             

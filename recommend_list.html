@@ -26,9 +26,7 @@
     <script>
         (function($) {
             $(window).on('scroll', function() {
-                var scrollHeight = $(document).height();
-                var scrollPosition = $(window).height() + $(window).scrollTop();
-                if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                if ($(window).outerHeight() + Math.ceil($(window).scrollTop()) >= $(document).height()) {
                     var productItem = '<li>';
                     productItem += '<a class="product-item" href="product_details.html">';
                     productItem += '<div class="product-image">';

@@ -48,6 +48,11 @@
                     $('.product-list ul').append(productItem);
                 }
             });
+
+            // 메뉴 진입 시, 선택된 카테로리로 슬라이드 이동
+            $(window).on('load', function() {
+                $('.category-tabs').scrollLeft($('.category-tabs .nav-link.active').parent().offset().left)
+            });
         })(jQuery);
     </script>
     <!-- // 개발 js -->

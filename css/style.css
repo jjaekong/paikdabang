@@ -1346,4 +1346,180 @@
   border-top: 1px solid #e9e9e9;
 }
 
+#main.terms {
+  padding: 6.9444444444vw;
+  color: #666;
+  font-size: 3.3333333333vw;
+  line-height: 5vw;
+}
+
+.alert-modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  padding: 8.3333333333vw;
+  margin: 0;
+  height: 100%;
+  max-width: none;
+}
+.alert-modal .modal-content {
+  overflow: hidden;
+  border: 0;
+  border-radius: 4.1666666667vw;
+}
+.alert-modal .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16.9444444444vw;
+  border-bottom: 0.2777777778vw solid #fbe032;
+}
+.alert-modal .modal-header .modal-title {
+  margin-bottom: 0;
+  font-size: 3.8888888889vw;
+  font-weight: 900;
+}
+.alert-modal .modal-footer {
+  overflow: hidden;
+  padding: 0;
+  height: 13.3333333333vw;
+  border: 0;
+}
+.alert-modal .modal-footer .btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+  box-shadow: none;
+  font-size: 3.8888888889vw;
+  border-radius: 0;
+}
+.alert-modal .modal-footer .btn-cancel {
+  background: #e9e9e9;
+  color: #003da6;
+}
+.alert-modal .modal-footer .btn-ok {
+  background: #003da6;
+  color: #fff;
+}
+.alert-modal .modal-body {
+  overflow: auto;
+  padding: 0;
+}
+.alert-modal div.message {
+  padding: 6.25vw 10.4166666667vw;
+  color: #666;
+}
+.alert-modal div.message .message-header {
+  text-align: center;
+}
+.alert-modal div.message .message-header h5 {
+  margin: 0 0 4.1666666667vw;
+  font-size: 3.8888888889vw;
+  font-weight: normal;
+}
+.alert-modal div.message .message-body {
+  font-size: 3.3333333333vw;
+  line-height: 5vw;
+}
+.alert-modal div.message .message-body h6 {
+  margin: 0;
+  font-size: 3.3333333333vw;
+  line-height: 5vw;
+}
+.alert-modal div.message .message-body p {
+  margin: 0;
+}
+.alert-modal p.message {
+  margin: 0;
+  padding: 5.5555555556vw 8.3333333333vw;
+  font-size: 3.8888888889vw;
+  color: #666;
+  letter-spacing: -0.1388888889vw;
+  text-align: center;
+}
+
+#refund-amount .help {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 31.9444444444vw;
+}
+#refund-amount .help h5, #refund-amount .help p {
+  margin: 0;
+}
+#refund-amount .help h5 {
+  margin-bottom: 4.1666666667vw;
+  font-size: 4.4444444444vw;
+  color: #003da6;
+  font-weight: 900;
+  letter-spacing: -0.1388888889vw;
+}
+#refund-amount .help p {
+  font-size: 3.8888888889vw;
+  line-height: 5.5555555556vw;
+  color: #666;
+  text-align: center;
+}
+#refund-amount .tbl .tbl-header {
+  height: 6.25vw;
+  background: #e9e9e9;
+  font-size: 2.7777777778vw;
+  color: #666;
+}
+#refund-amount .tbl .tbl-header [role=row] {
+  display: flex;
+  height: 100%;
+}
+#refund-amount .tbl .tbl-header [role=row] [role=columnheader] {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#refund-amount .tbl .tbl-header [role=row] .pay-type {
+  flex: 1;
+  text-align: center;
+}
+#refund-amount .tbl .tbl-header [role=row] .price {
+  width: 27.7777777778vw;
+  text-align: center;
+}
+#refund-amount .tbl .tbl-body [role=row] {
+  display: flex;
+  margin-bottom: 0;
+  padding-top: 2.7777777778vw;
+  padding-bottom: 2.7777777778vw;
+  width: 100%;
+  color: #666;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 3.3333333333vw;
+}
+#refund-amount .tbl .tbl-body [role=row] .pay-type {
+  padding-left: 6.25vw;
+  padding-right: 6.25vw;
+  flex: 1;
+}
+#refund-amount .tbl .tbl-body [role=row] .price {
+  width: 27.7777777778vw;
+  text-align: center;
+}
+#refund-amount .notice {
+  padding: 4.8611111111vw 6.25vw;
+}
+#refund-amount .notice h5, #refund-amount .notice p {
+  margin: 0;
+  font-size: 3.3333333333vw;
+  line-height: 5vw !important;
+  color: #666;
+}
+#refund-amount .notice h5 {
+  font-weight: 900;
+}
+#refund-amount .modal-body {
+  max-height: 77.7777777778vw;
+}
+
 /*# sourceMappingURL=style.css.map */

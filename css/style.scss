@@ -1420,3 +1420,188 @@
         }
     }
 }
+
+#main.terms {
+    padding: vw(50px);
+    color: #666;
+    font-size: vw(24px);
+    line-height: vw(36px);
+}
+
+.alert-modal {
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        padding: vw(60px);
+        margin: 0;
+        height: 100%;
+        max-width: none;
+    }
+    .modal-content {
+        overflow: hidden;
+        border: 0;
+        border-radius: vw(30px);
+    }
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: vw(122px);
+        border-bottom: vw(2px) solid #fbe032;
+        .modal-title {
+            margin-bottom: 0;
+            font-size: vw(28px);
+            font-weight: 900;
+        }
+    }
+    .modal-footer {
+        overflow: hidden;
+        padding: 0;
+        height: vw(96px);
+        border: 0;
+        .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100%;
+            box-shadow: none;
+            font-size: vw(28px);
+            border-radius: 0;
+        }
+        .btn-cancel {
+            background: #e9e9e9;
+            color: $kc;
+        }
+        .btn-ok {
+            background: $kc;
+            color: #fff;
+        }
+    }
+    .modal-body {
+        overflow: auto;
+        padding: 0;
+    }
+    div.message {
+        padding: vw(45px) vw(75px);
+        color: #666;
+        
+        .message-header {
+            text-align: center;
+            h5 {
+                margin: 0 0 vw(30px);
+                font-size: vw(28px);
+                font-weight: normal;
+            }
+        }
+        .message-body {
+            font-size: vw(24px);
+            line-height: vw(36px);
+            h6 {
+                margin: 0;
+                font-size: vw(24px);
+                line-height: vw(36px);
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+    p.message {
+        margin: 0;
+        padding: vw(40px) vw(60px);
+        font-size: vw(28px);
+        color: #666;
+        letter-spacing: vw(-1px);
+        text-align: center;
+    }
+}
+
+#refund-amount {
+    .help {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: vw(230px);
+        h5, p {
+            margin: 0;
+        }
+        h5 {
+            margin-bottom: vw(30px);
+            font-size: vw(32px);
+            color: $kc;
+            font-weight: 900;
+            letter-spacing: vw(-1px);
+        }
+        p {
+            font-size: vw(28px);
+            line-height: vw(40px);
+            color: #666;
+            text-align: center;
+        }
+    }
+    .tbl {
+        .tbl-header {
+            height: vw(45px);
+            background: #e9e9e9;
+            font-size: vw(20px);
+            color: #666;
+            [role="row"] {
+                display: flex;
+                height: 100%;
+                [role="columnheader"] {
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .pay-type {
+                    flex: 1;
+                    text-align: center;
+                }
+                .price {
+                    width: vw(200px);
+                    text-align: center;
+                }
+            }
+        }
+        .tbl-body {
+            [role="row"] {
+                display: flex;
+                margin-bottom: 0;
+                padding-top: vw(20px);
+                padding-bottom: vw(20px);
+                width: 100%;
+                color: #666;
+                border-bottom: 1px solid #e9e9e9;
+                font-size: vw(24px);
+                .pay-type {
+                    padding-left: vw(45px);
+                    padding-right: vw(45px);
+                    flex: 1;
+                }
+                .price {
+                    width: vw(200px);
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .notice {
+        padding: vw(35px) vw(45px);
+        h5, p {
+            margin: 0;
+            font-size: vw(24px);
+            line-height: vw(36px) !important;
+            color: #666;
+        }
+        h5 {
+            font-weight: 900;
+        }
+    }
+    .modal-body {
+        max-height: vw(560px);
+    }
+}

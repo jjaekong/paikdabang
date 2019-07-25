@@ -68,6 +68,7 @@
             <li><a href="#not-checked-terms" data-toggle="modal">결제하기 유효성 체크 - 개인정보 수집 및 이용동의 미체크</a></li>
             <li><a href="#not-checked-purchase" data-toggle="modal">결제하기 유효성 체크 - 구매조건 동의 미체크</a></li>
             <li><a href="#recipient-not-entered" data-toggle="modal">결제하기 유효성 체크 - 받는사람 미입력</a></li>
+            <li><a href="#invalid-number" data-toggle="modal">결제하기 유효성 체크 - 휴대폰 번호 체계 미일치</a></li>
             <li><a href="#message-not-entered" data-toggle="modal">결제하기 유효성 체크 - 메시지 미입력</a></li>
             <li><a href="#complete-gift" data-toggle="modal">선물 완료</a></li>
         </ol>
@@ -75,20 +76,197 @@
         <h6 class="mt-4">구매내역 - 구매내역 상세</h6>
         <ol>
             <li><a href="#extend-validity" data-toggle="modal">유효기간 연장</a></li>
+            <li><a href="#failed-extend-validity" data-toggle="modal">유효기간 연장 실패 시</a></li>
             <li><a href="#complete-extend-validity" data-toggle="modal">유효기간 연장 완료</a></li>
             <li><a href="#agree-cancel-policy-exchange" data-toggle="modal">구매취소 규정 동의 - 교환권</a></li>
             <li><a href="#agree-cancel-policy-voucher" data-toggle="modal">구매취소 규정 동의 - 금액권</a></li>
             <li><a href="#confirm-cancel-purchase" data-toggle="modal">구매취소 확인</a></li>
+            <li><a href="#failed-cancel-purchase" data-toggle="modal">구매취소 실패</a></li>
             <li><a href="#complete-cancel-purchase" data-toggle="modal">구매취소 완료</a></li>
+            <li><a href="#confirm-request-refund" data-toggle="modal">환불신청 - 신청 시도 시</a></li>
+            <li><a href="#complete-request-refund" data-toggle="modal">환불신청 - 신청 완료</a></li>
+            <li><a href="#failed-request-refund" data-toggle="modal">환불신청 - 환불 실패 시</a></li>
             <li><a href="#product-not-found" data-toggle="modal">구매한 상품 상세보기 - 상품없음</a></li>
         </ol>
 
         <h6 class="mt-4">기타</h6>
         <ol>
             <li><a href="#refund-amount" data-toggle="modal">환불 예정 금액</a></li>
+            <li><a href="#network-error" data-toggle="modal">네트워크 오류 시</a></li>
+            <li><a href="#linking-member-error" data-toggle="modal">기프트샵 접근 시 - 회원 정보 연동 오류</a></li>
         </ol>
 
     </main>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="linking-member-error">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        유효하지 않은 정보입니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="network-error">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        네트워크 오류입니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="failed-request-refund">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        환불 신청이 실패하였습니다.<br>
+                        고객센터에 연락주세요.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="complete-request-refund">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">환불신청 완료</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-header">
+                            <h5>환불신청을 완료했습니다.</h5>
+                        </div>
+                        <div class="message-body">
+                            <h6>환불규정</h6>
+                            <p>
+                                - 구매자만 가능합니다.<br>
+                                - 유효기간 만료 시 10%를 차감한 취소 처리<br>
+                                - 영업일 기준으로 2~5일 소요<br>
+                                - 휴대폰 으로 결제한 고객님은 고객센터로 문의해주시기 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="confirm-request-refund">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">환불 규정 동의</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-header">
+                            <h5>환불 규정에 동의하십니까?</h5>
+                        </div>
+                        <div class="message-body">
+                            <h6>환불규정</h6>
+                            <p>
+                                - 구매자만 가능합니다.<br>
+                                - 유효기간 만료 시 10%를 차감한 취소 처리<br>
+                                - 영업일 기준으로 2~5일 소요<br>
+                                - 휴대폰 으로 결제한 고객님은 고객센터로 문의해주시기 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-ok">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="failed-cancel-purchase">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        구매취소가 실패 하였습니다.<br>
+                        고객센터에 연락주세요.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="failed-extend-validity">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        유효기간 연장에 실패하였습니다.<br>
+                        고객센터에 연락주세요.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="invalid-number">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="message">
+                        유효하지 않은 휴대폰 번호입니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal alert-modal" tabindex="-1" role="dialog" id="product-not-found">
         <div class="modal-dialog" role="document">

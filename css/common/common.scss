@@ -101,7 +101,7 @@ body {
         border-radius: vw(35px);
         background: #fff;
         .product-body {
-            padding: vw(15px) vw(30px) vw(30px) vw(30px);
+            padding: vw(15px) vw(30px) vw(15px) vw(30px);
             height: vw(215px);
         }
         .product-image {
@@ -120,14 +120,14 @@ body {
             color: #bebebe;
         }
         .product-title {
-            margin: vw(20px) 0 0;
+            margin: vw(10px) 0 0;
             font-size: vw(26px);
             line-height: vw(30px);
             min-height: vw(60px);
             color: #333;
         }
         .product-price {
-            margin: vw(15px) 0 0;
+            margin: vw(10px) 0 0;
             font-size: vw(28px);
             font-weight: bold;
             color: $kc;

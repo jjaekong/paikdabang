@@ -36,9 +36,36 @@
     <!-- 주의: 개발에 필요한 js는 이 영역에 작성해 주세요 -->
     <script>
         (function($) {
+
             $(window).on('load', function() {
+
                 $('#exchange-tab').tab('show');
+
             })
+
+            // 타임딜 모달 관련 스크립트
+            var timedealSwiper;
+            
+            $(window).on('load', function() {
+
+                // 타임딜 모달 보이기
+                $('.timedeal-modal').modal('show');
+
+                timedealSwiper = new Swiper ('.timedeal-modal .swiper-container', {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                });
+
+            });
+
+            // 타임딜(모듈형)에서 선물하기 클릭 시
+            $(document).on('click', '.timedeal-modal .btn-gift', function() {
+                var $selectedSlide = $(timedealSwiper.slides[timedealSwiper.activeIndex]);
+                $(this).attr('href', $selectedSlide.find('a').attr('href'))
+            });
+
         })(jQuery);
     </script>
     <!-- // 개발 js -->
@@ -227,7 +254,7 @@
                 <!-- // 빽's 메뉴판 -->
 
                 <!-- 기프티콘 하단 배너 -->
-                <div class="bottom-banner swiper-container">
+                <!-- <div class="bottom-banner swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#">
@@ -246,7 +273,7 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                </div>
+                </div> -->
                 <!-- //기프티콘 상단 배너 -->
 
             </div>
@@ -584,6 +611,116 @@
         </div>
 
     </main>
+
+    <!-- 타임딜 모달: 모듈 타입 -->
+    <!-- <div class="modal alert-modal timedeal-modal module-type" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <a class="btn-close" href="#" data-dismiss="modal"><img src="/images/ico_close_small.png"> 닫기</a>
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <img src="/images/t_timedeal.png" alt="반짝 타임딜! 지금 이 상품 얼릉">
+                    </h4>    
+                </div>
+                <div class="modal-body">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#0">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <h4 class="product-title">베리크런치 빽스치노 (SOFT)</h4>
+                                    <p class="product-price">3,500원 <s>4,000원</s></p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#1">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <h4 class="product-title">베리크런치 빽스치노 (SOFT)</h4>
+                                    <p class="product-price">3,500원 <s>4,000원</s></p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#2">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <h4 class="product-title">베리크런치 빽스치노 (SOFT)</h4>
+                                    <p class="product-price">3,500원 <s>4,000원</s></p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#3">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <h4 class="product-title">베리크런치 빽스치노 (SOFT)</h4>
+                                    <p class="product-price">3,500원 <s>4,000원</s></p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#4">
+                                    <div class="product-image">
+                                        <img src="/images/img_product_dummy.jpg">
+                                    </div>
+                                    <h4 class="product-title">베리크런치 빽스치노 (SOFT)</h4>
+                                    <p class="product-price">3,500원 <s>4,000원</s></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-ok btn-gift">선물하기</a>
+                </div>
+                <a class="btn-not-today" href="#">오늘 하루 보지 않기</a>
+            </div>
+        </div>
+    </div> -->
+    <!-- //타임딜 모달 -->
+
+    <!-- 타임딜 모달: 이미지 타입 -->
+    <div class="modal alert-modal timedeal-modal image-type" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <a class="btn-close" href="#" data-dismiss="modal"><img src="/images/ico_close_small.png"> 닫기</a>
+                <div class="modal-body">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#0">
+                                    <div class="product-image">
+                                        <img src="/images/img_timedeal_dummy.png">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#1">
+                                    <div class="product-image">
+                                        <img src="/images/img_timedeal_dummy.png">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/product_details.html#2">
+                                    <div class="product-image">
+                                        <img src="/images/img_timedeal_dummy.png">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <a class="btn-not-today" href="#">오늘 하루 보지 않기</a>
+            </div>
+        </div>
+    </div>
+    <!-- //타임딜 모달 -->
 
 </body>
 </html>

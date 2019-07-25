@@ -93,7 +93,7 @@ body {
   background: #fff;
 }
 #main .product-item .product-body {
-  padding: 2.0833333333vw 4.1666666667vw 4.1666666667vw 4.1666666667vw;
+  padding: 2.0833333333vw 4.1666666667vw 2.0833333333vw 4.1666666667vw;
   height: 29.8611111111vw;
 }
 #main .product-item .product-image {
@@ -112,14 +112,14 @@ body {
   color: #bebebe;
 }
 #main .product-item .product-title {
-  margin: 2.7777777778vw 0 0;
+  margin: 1.3888888889vw 0 0;
   font-size: 3.6111111111vw;
   line-height: 4.1666666667vw;
   min-height: 8.3333333333vw;
   color: #333;
 }
 #main .product-item .product-price {
-  margin: 2.0833333333vw 0 0;
+  margin: 1.3888888889vw 0 0;
   font-size: 3.8888888889vw;
   font-weight: bold;
   color: #003da6;

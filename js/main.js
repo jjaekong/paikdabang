@@ -23,19 +23,6 @@
         }
     });
 
-    // $('#exchange-tab').on('shown.bs.tab', function (e) {
-    //     if (exchangeBottomSwiper) {
-    //         exchangeBottomSwiper.update()
-    //     } else {
-    //         exchangeBottomSwiper = new Swiper ('#exchange .bottom-banner.swiper-container', {
-    //             loop: true,
-    //             pagination: {
-    //                 el: '.swiper-pagination',
-    //             },
-    //         });
-    //     }
-    // });
-
     $('#voucher-tab').on('shown.bs.tab', function (e) {
         if (voucherSwiper) {
             voucherSwiper.update()

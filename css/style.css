@@ -741,7 +741,7 @@
 #main.gift .message .message-wrapper .message-body .preview .preview-body {
   padding-top: 7.6388888889vw;
   min-height: 33.3333333333vw;
-  color: #f36c58;
+  color: #666;
   font-size: 4.4444444444vw;
   line-height: 8.3333333333vw;
   font-weight: 900;
@@ -1227,6 +1227,62 @@
 }
 #main.history-details .product .order-info-wrapper dl + dl {
   margin-top: 0.6944444444vw;
+}
+#main.history-details .message {
+  padding: 0 4.1666666667vw 4.1666666667vw 4.1666666667vw;
+  background: #e9e9e9;
+}
+#main.history-details .message .message-wrapper {
+  padding-left: 4.1666666667vw;
+  padding-right: 4.1666666667vw;
+  background: #fbe032;
+  border-radius: 3.4722222222vw;
+  box-shadow: 0px 0.6944444444vw 2.7708333333vw 0.1458333333vw rgba(0, 0, 0, 0.1);
+}
+#main.history-details .message .message-wrapper .message-row {
+  padding-top: 1.3888888889vw;
+  padding-bottom: 1.3888888889vw;
+}
+#main.history-details .message .message-wrapper .message-col {
+  padding-left: 1.3888888889vw;
+  padding-right: 1.3888888889vw;
+}
+#main.history-details .message .message-wrapper .message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3.4722222222vw;
+  padding-left: 3.4722222222vw;
+  padding-right: 3.4722222222vw;
+  height: 12.5vw;
+}
+#main.history-details .message .message-wrapper .message-header h4 {
+  margin: 0;
+  font-size: 3.3333333333vw;
+  color: #666;
+  font-weight: normal;
+}
+#main.history-details .message .message-wrapper .message-header .phone {
+  font-size: 3.3333333333vw;
+}
+#main.history-details .message .message-wrapper .message-body .preview {
+  margin-bottom: 2.7777777778vw;
+  background-color: #fff;
+  border-radius: 4.1666666667vw;
+  padding-left: 4.1666666667vw;
+  padding-right: 4.1666666667vw;
+}
+#main.history-details .message .message-wrapper .message-body .preview .preview-body {
+  padding-top: 7.6388888889vw;
+  min-height: 33.3333333333vw;
+  color: #666;
+  font-size: 4.4444444444vw;
+  line-height: 8.3333333333vw;
+  font-weight: 900;
+  text-align: center;
+  background-image: url(/images/bg_message_preview.gif);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
 }
 #main.history-details .company {
   display: flex;

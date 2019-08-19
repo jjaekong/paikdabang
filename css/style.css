@@ -1696,6 +1696,11 @@
   opacity: 1;
 }
 
+.timedeal-modal.module-type .modal-dialog {
+  justify-content: center;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
 .timedeal-modal.module-type .modal-content {
   width: 86.1111111111vw;
   height: 99.7222222222vw;
@@ -1757,21 +1762,6 @@
 }
 .timedeal-modal.module-type .modal-footer .btn {
   border-color: #003da6;
-}
-
-.timedeal-modal.image-type .modal-content {
-  width: 86.1111111111vw;
-  height: 99.7222222222vw;
-  background: transparent;
-}
-.timedeal-modal.image-type .modal-body .swiper-slide {
-  border-radius: 4.1666666667vw;
-}
-.timedeal-modal.image-type .modal-body .swiper-slide .product-image img {
-  width: 100%;
-}
-.timedeal-modal.image-type .modal-body .swiper-pagination {
-  bottom: 5.5555555556vw;
 }
 
 @media (min-height: 197.2222222222vw) {

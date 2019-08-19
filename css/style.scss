@@ -1786,6 +1786,11 @@
     }
 }
 .timedeal-modal.module-type {
+    .modal-dialog {
+        justify-content: center;
+        padding: 0;
+        background: rgba(#000, .6);
+    }
     .modal-content {
         width: vw(620px);
         height: vw(718px);
@@ -1849,26 +1854,6 @@
     .modal-footer {
         .btn {
             border-color: $kc;
-        }
-    }
-}
-.timedeal-modal.image-type {
-    .modal-content {
-        width: vw(620px);
-        height: vw(718px);
-        background: transparent;
-    }
-    .modal-body {
-        .swiper-slide {
-            border-radius: vw(30px);
-            .product-image {
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        .swiper-pagination {
-            bottom: vw(40px);
         }
     }
 }

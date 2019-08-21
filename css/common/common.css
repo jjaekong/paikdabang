@@ -3,6 +3,7 @@ html, body {
   position: relative;
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 html.full-height,
@@ -21,6 +22,7 @@ body {
   z-index: 11;
   position: sticky;
   top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   background: #003da6;
@@ -39,28 +41,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 11.1111111111vw;
-  height: 11.1111111111vw;
+  width: 8.8888888889vw;
+  height: 8.8888888889vw;
   border: 0;
   padding: 0;
   outline: 0;
   box-shadow: none;
 }
 #header .btn-back img {
-  width: 3.1944444444vw;
+  width: 100%;
 }
 #header .btn-close img {
-  width: 5.9722222222vw;
+  width: 100%;
 }
 #header .btn-history img {
-  width: 5.9722222222vw;
+  width: 100%;
 }
 
 #main .tabs {
   z-index: 10;
   position: sticky;
   top: 17.2222222222vw;
-  height: 15vw;
+  height: 13.3333333333vw;
 }
 #main .tabs li {
   flex: 1;
@@ -163,8 +165,8 @@ body {
   margin-bottom: 8.3333333333vw;
   margin-left: 4.1666666667vw;
   margin-right: 4.1666666667vw;
-  height: 10.5555555556vw;
-  border-radius: 5.2777777778vw;
+  height: 11.1111111111vw;
+  border-radius: 5.5555555556vw;
   background-color: #fff;
 }
 #main .sorter li {
@@ -183,11 +185,9 @@ body {
   font-size: 3.3333333333vw;
 }
 #main .sorter li a.active {
-  margin-top: -0.4166666667vw;
-  height: 11.1111111111vw;
   background: #003da6;
   color: #fff;
-  border-radius: 5.2777777778vw;
+  border-radius: 5.5555555556vw;
 }
 #main .category-tabs {
   z-index: 10;

@@ -5,6 +5,7 @@ html, body {
     position: relative;
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 html.full-height,
@@ -23,6 +24,7 @@ body {
     z-index: 11;
     position: sticky;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     background: $kc;
@@ -40,8 +42,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: vw(80px);
-        height: vw(80px);
+        width: vw(64px);
+        height: vw(64px);
         border: 0;
         padding: 0;
         outline: 0;
@@ -49,17 +51,17 @@ body {
     }
     .btn-back {
         img {
-            width: vw(23px);
+            width: 100%;
         }
     }
     .btn-close {
         img {
-            width: vw(43px);
+            width: 100%;
         }
     }
     .btn-history {
         img {
-            width: vw(43px);
+            width: 100%;
         }
     }
 }
@@ -69,7 +71,7 @@ body {
         z-index: 10;
         position: sticky;
         top: vw(124px);
-        height: vw(108px);
+        height: vw(96px);
         li {
             flex: 1;
             a {
@@ -172,8 +174,8 @@ body {
         margin-bottom: vw(60px);
         margin-left: vw(30px);
         margin-right: vw(30px);
-        height: vw(76px);
-        border-radius: vw(38px);
+        height: vw(80px);
+        border-radius: vw(40px);
         background-color: #fff;
         li {
             flex: 1;
@@ -189,11 +191,9 @@ body {
                 color: #666;
                 font-size: vw(24px);
                 &.active {
-                    margin-top: vw(-3px);
-                    height: vw(80px);
                     background: $kc;
                     color: #fff;
-                    border-radius: vw(38px);
+                    border-radius: vw(40px);
                 }
             }
         }

@@ -67,6 +67,13 @@
                 }
                 $('#modal-select-contact').modal('hide');
             });
+
+            // 하단 결제 버튼들
+            $(document).on('click', '.action .btn', function () {
+                $('.action .btn').removeClass('on');
+                $(this).addClass('on');
+            });
+
         })(jQuery);
     </script>
     <!-- // 개발 js -->
@@ -208,7 +215,7 @@
 
         <!-- 하단 버튼 영역 -->
         <div class="action">
-            <button class="btn btn-card" type="button">신용카드</button>
+            <button class="btn btn-card on" type="button">신용카드</button>
             <button class="btn btn-phone" type="button">휴대폰결제</button>
             <!-- 페이코 결제는 1차 제외 --> 
             <!-- <button class="btn btn-payco" type="button">페이코결제</button> -->

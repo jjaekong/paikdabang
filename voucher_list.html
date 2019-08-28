@@ -67,12 +67,33 @@
     <header id="header">
         <a class="btn btn-back" href="index.html"><img src="/images/ico_arrow_left.png" alt="뒤로 가기"></a>
         <h1>사랑</h1>
-        <a class="btn btn-category" href="#"><img src="/images/ico_menu.png" alt="카테고리"></a>
+        <a class="btn btn-category" href="#category-list" data-toggle="modal"><img src="/images/ico_menu.png" alt="카테고리"></a>
     </header>
     <!-- //공통 헤더 -->
 
     <!-- 금액권 목록: voucher 클래스 필요 -->
     <main id="main" class="voucher">
+
+        <!-- 카테고리 모달 -->
+        <div class="modal alert-modal" tabindex="-1" role="dialog" id="category-list" data-backdrop="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a class="btn-close" href="#" data-dismiss="modal"><img src="/images/ico_close_small.png"> 닫기</a>
+                    <div class="modal-header">
+                        <h4 class="modal-title">금액권 카테고리 선택</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li><a class="active" href="#">축하</a></li><!-- 기 선택된 카테고리의 경우 active 클래스 필요 -->
+                            <li><a href="#">기념</a></li>
+                            <li><a href="#">사랑</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //카테고리 모달 -->
 
         <!-- 권종 탭 -->
         <ul class="nav tabs nav-tabs" role="tablist">
@@ -169,6 +190,10 @@
                     </a>
                 </li>
             </ul>
+            <!-- 내역이 없을 경우 -->
+            <!-- <p class="no-data">
+                조회 내역이 없습니다.
+            </p> -->
         </div>
 
     </main>

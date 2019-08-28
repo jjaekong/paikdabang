@@ -71,7 +71,7 @@
     <!-- // 개발 js -->
 
 </head>
-<body>
+<body class="loading">
 
     <!-- 공통 헤더 -->
     <header id="header">
@@ -620,9 +620,13 @@
                 <div class="modal-header">
                     <h4 class="modal-title">
                         <img src="/images/t_timedeal.png" alt="반짝 타임딜! 지금 이 상품 얼릉">
-                    </h4>    
+                    </h4>
                 </div>
                 <div class="modal-body">
+                    <div class="timedeal-expire">
+                        <img src="/images/ico_watch.png">
+                        <b>2019.09.24 ~ 2019.09.30</b>
+                    </div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -682,6 +686,30 @@
         </div>
     </div>
     <!-- //타임딜 모달 -->
+
+    <!-- 로딩 레이어 -->
+    <div class="loading">
+        <img src="/images/loading.gif" alt="로딩 중">
+    </div>
+    <!-- //로딩 레이어 -->
+
+    <!-- 개발 시, 이 부분은 삭제해 주세요. 로딩 레이어를 없애는 기능입니다. -->
+    <!--
+        로딩 레이어가 필요할 경우,
+        - body에 loading 클래스 필요
+        - 로딩 div 필요
+        로딩 레이어를 없을 때,
+        - body에 loading 클래스 제거
+        - 로딩 div 제거
+    -->
+    <script>
+        (function($) {
+            $(document).on('click', 'div.loading', function() {
+                $(this).remove();
+                $('body').removeClass('loading');
+            })
+        })(jQuery);
+    </script>
 
 </body>
 </html>

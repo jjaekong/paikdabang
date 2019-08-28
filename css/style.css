@@ -99,20 +99,6 @@
 #main.main #exchange .section + .section {
   margin-top: 1.3888888889vw;
 }
-#main.main #exchange .product-list {
-  height: 52.0833333333vw;
-}
-#main.main #exchange .product-list li {
-  height: 52.0833333333vw;
-}
-#main.main #exchange .product-list .product-item .product-body {
-  padding-bottom: 3.4722222222vw;
-  height: 28.4722222222vw;
-}
-#main.main #exchange .section.category {
-  position: relative;
-  height: calc(100% - 30.5555555556vw - 63.75vw - 1.3888888889vw);
-}
 #main.main #exchange .category-list {
   overflow: auto;
   position: relative;
@@ -121,22 +107,21 @@
 #main.main #exchange .category-list ul {
   position: relative;
   overflow: hidden;
-  width: calc(30.5555555556vw * 6);
-  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 #main.main #exchange .category-list ul li {
   float: left;
-  width: 30.5555555556vw;
+  width: 33.33%;
   height: 100%;
-  padding: 0 0 4.8611111111vw 0;
+  padding: 0 0 5.5555555556vw 0;
 }
 #main.main #exchange .category-list ul li + li a {
   border-left: 1px solid #e9e9e9;
 }
 #main.main #exchange .category-list ul li a {
+  padding-top: 2.7777777778vw;
   display: flex;
   width: 100%;
   height: 100%;
@@ -171,6 +156,14 @@
 #main.promotion,
 #main.voucher {
   padding-top: 13.3333333333vw;
+}
+#main.promotion .no-data,
+#main.voucher .no-data {
+  height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw - 13.3333333333vw);
+}
+
+#main.recommend .no-data {
+  height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw);
 }
 
 #main.recommend,
@@ -224,6 +217,45 @@
 #main.voucher .product-list li .flag {
   top: 1.3888888889vw;
   right: 1.3888888889vw;
+}
+#main.recommend #category-list,
+#main.promotion #category-list,
+#main.voucher #category-list {
+  background: rgba(0, 0, 0, 0.6);
+}
+#main.recommend #category-list .modal-header .modal-title,
+#main.promotion #category-list .modal-header .modal-title,
+#main.voucher #category-list .modal-header .modal-title {
+  font-size: 4.4444444444vw;
+}
+#main.recommend #category-list .modal-body ul,
+#main.promotion #category-list .modal-body ul,
+#main.voucher #category-list .modal-body ul {
+  list-style: none;
+  padding: 0 4.1666666667vw;
+  margin: 0;
+}
+#main.recommend #category-list .modal-body ul li + li,
+#main.promotion #category-list .modal-body ul li + li,
+#main.voucher #category-list .modal-body ul li + li {
+  border-top: 1px solid #e9e9e9;
+}
+#main.recommend #category-list .modal-body ul li a,
+#main.promotion #category-list .modal-body ul li a,
+#main.voucher #category-list .modal-body ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17.5vw;
+  font-size: 4.4444444444vw;
+  color: #333;
+  text-decoration: none;
+}
+#main.recommend #category-list .modal-body ul li a.active,
+#main.promotion #category-list .modal-body ul li a.active,
+#main.voucher #category-list .modal-body ul li a.active {
+  font-weight: bold;
+  color: #003da6;
 }
 
 #main.product-details {
@@ -1094,6 +1126,9 @@
   text-align: center;
 }
 
+.history .no-data {
+  height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw);
+}
 .history .history-list ul {
   padding: 0;
   margin: 0;
@@ -1746,7 +1781,7 @@
   display: flex;
   justify-content: center;
   height: 2.2222222222vw;
-  bottom: 4.1666666667vw;
+  bottom: 4.1666666667vw !important;
 }
 .timedeal-modal .swiper-pagination .swiper-pagination-bullet {
   margin: 0 1.3888888889vw;
@@ -1767,8 +1802,10 @@
 }
 .timedeal-modal.module-type .modal-content {
   width: 86.1111111111vw;
-  height: 99.7222222222vw;
-  background: #fff;
+  background: transparent;
+}
+.timedeal-modal.module-type .modal-content .btn-close {
+  top: 0.6944444444vw;
 }
 .timedeal-modal.module-type .modal-header {
   height: auto;
@@ -1782,7 +1819,21 @@
   width: 100%;
 }
 .timedeal-modal.module-type .modal-body {
-  height: 63.8888888889vw;
+  background: #fff;
+}
+.timedeal-modal.module-type .modal-body .timedeal-expire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #003da6;
+  color: #fff;
+  font-size: 3.3333333333vw;
+  height: 7.2222222222vw;
+}
+.timedeal-modal.module-type .modal-body .timedeal-expire img {
+  margin-right: 1.3888888889vw;
+  width: 3.0555555556vw;
+  height: 3.0555555556vw;
 }
 .timedeal-modal.module-type .modal-body .swiper-slide {
   height: 63.8888888889vw;
@@ -1833,11 +1884,11 @@
     overflow: hidden;
   }
   .main #exchange .category-list ul {
-    width: 100%;
+    width: 100% !important;
   }
   .main #exchange .category-list ul li {
-    width: 33.33%;
-    height: 50%;
+    width: 33.33% !important;
+    height: 50% !important;
   }
 }
 

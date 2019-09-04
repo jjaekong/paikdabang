@@ -5,22 +5,6 @@ html, body {
     position: relative;
     margin: 0;
     padding: 0;
-    min-height: 100%;
-}
-
-html.full-height,
-body.full-height {
-    width: 100%;
-    height: 100%;
-    min-height: auto;
-}
-
-body.full-height {
-    &:before, 
-    &:after {
-        display: flex;
-        content: ' ';
-    }
 }
 
 body {
@@ -34,7 +18,7 @@ body.loading {
 }
 
 #header {
-    z-index: 11;
+    z-index: 1010;
     position: fixed;
     top: 0;
     left: 0;
@@ -86,7 +70,7 @@ body.loading {
 
 #main {
     .tabs {
-        z-index: 10;
+        z-index: 1005;
         position: fixed;
         top: vw(124px);
         width: 100%;
@@ -189,7 +173,8 @@ body.loading {
         }
     }
     .sorter {
-        margin-top: vw(60px);
+        // margin-top: vw(60px);
+        z-index: 1001;
         margin-bottom: vw(60px);
         margin-left: vw(30px);
         margin-right: vw(30px);
@@ -206,6 +191,7 @@ body.loading {
                 align-items: center;
                 margin: 0;
                 padding: 0;
+                width: 100%;
                 height: 100%;
                 border: 0;
                 color: #666;

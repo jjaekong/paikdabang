@@ -155,13 +155,16 @@
 
 #main.promotion,
 #main.voucher {
-  padding-top: 13.3333333333vw;
+  padding-top: 21.6666666667vw;
 }
 #main.promotion .no-data,
 #main.voucher .no-data {
   height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw - 13.3333333333vw);
 }
 
+#main.recommend {
+  padding-top: 8.3333333333vw;
+}
 #main.recommend .no-data {
   height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw);
 }
@@ -169,7 +172,6 @@
 #main.recommend,
 #main.promotion,
 #main.voucher {
-  min-height: 100%;
   background: #e9e9e9;
 }
 #main.recommend:before, #main.recommend:after,
@@ -420,6 +422,7 @@
   align-items: center;
 }
 #main.product-details .action {
+  z-index: 1;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1126,6 +1129,9 @@
   text-align: center;
 }
 
+.history {
+  padding-top: 8.3333333333vw;
+}
 .history .no-data {
   height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw);
 }
@@ -1812,6 +1818,7 @@
   padding: 0;
 }
 .timedeal-modal.module-type .modal-title {
+  width: 100%;
   border-top-left-radius: 4.1666666667vw;
   border-top-right-radius: 4.1666666667vw;
 }
@@ -1877,19 +1884,6 @@
 }
 .timedeal-modal.module-type .modal-footer .btn {
   border-color: #003da6;
-}
-
-@media (min-height: 197.2222222222vw) {
-  .main #exchange .category-list {
-    overflow: hidden;
-  }
-  .main #exchange .category-list ul {
-    width: 100% !important;
-  }
-  .main #exchange .category-list ul li {
-    width: 33.33% !important;
-    height: 50% !important;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

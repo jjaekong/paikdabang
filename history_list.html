@@ -40,30 +40,32 @@
     <script>
         (function($) {
             $(window).on('scroll', function() {
-                if ($(window).outerHeight() + Math.ceil($(window).scrollTop()) >= $(document).height()) {
-                    var historyItem = '<li>';
-                    historyItem += '<a class="history-item" href="history_details.html">';
-                    historyItem += '<div class="history-image">';
-                    historyItem += '<img src="/images/img_product_dummy2.jpg">';
-                    historyItem += '</div>';
-                    historyItem += '<div class="history-body">';
-                    historyItem += '<h6 class="history-category">선물하기</h6>';
-                    historyItem += '<h4 class="history-title">플레인 요거트 스무디</h4>';
-                    historyItem += '<div class="history-phone">010-42**-52**</div>';
-                    historyItem += '<div class="history-expire">';
-                    historyItem += '2019년 10월 12일까지 <span class="d-day">D-13</span>';
-                    historyItem += '</div>';
-                    historyItem += '<div class="history-price">';
-                    historyItem += '<span>3개</span> <b>9,000원</b>';
-                    historyItem += '</div>';
-                    historyItem += '</div>';
-                    historyItem += '</a>';
-                    historyItem += '</li>';
-                    $('.history-list ul').append(historyItem);
-                    $('.history-list ul').append(historyItem);
-                    $('.history-list ul').append(historyItem);
-                    $('.history-list ul').append(historyItem);
-                    $('.history-list ul').append(historyItem);
+                if ($(window).outerHeight() < $(document).height()) {
+                    if ($(window).outerHeight() + Math.ceil($(window).scrollTop()) >= $(document).height()) {
+                        var historyItem = '<li>';
+                        historyItem += '<a class="history-item" href="history_details.html">';
+                        historyItem += '<div class="history-image">';
+                        historyItem += '<img src="/images/img_product_dummy2.jpg">';
+                        historyItem += '</div>';
+                        historyItem += '<div class="history-body">';
+                        historyItem += '<h6 class="history-category">선물하기</h6>';
+                        historyItem += '<h4 class="history-title">플레인 요거트 스무디</h4>';
+                        historyItem += '<div class="history-phone">010-42**-52**</div>';
+                        historyItem += '<div class="history-expire">';
+                        historyItem += '2019년 10월 12일까지 <span class="d-day">D-13</span>';
+                        historyItem += '</div>';
+                        historyItem += '<div class="history-price">';
+                        historyItem += '<span>3개</span> <b>9,000원</b>';
+                        historyItem += '</div>';
+                        historyItem += '</div>';
+                        historyItem += '</a>';
+                        historyItem += '</li>';
+                        $('.history-list ul').append(historyItem);
+                        $('.history-list ul').append(historyItem);
+                        $('.history-list ul').append(historyItem);
+                        $('.history-list ul').append(historyItem);
+                        $('.history-list ul').append(historyItem);
+                    }
                 }
             });
         })(jQuery);

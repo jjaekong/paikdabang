@@ -34,24 +34,26 @@
     <script>
         (function($) {
             $(window).on('scroll', function() {
-                if ($(window).outerHeight() + Math.ceil($(window).scrollTop()) >= $(document).height()) {
-                    var productItem = '<li>';
-                    productItem += '<a class="product-item" href="product_details.html">';
-                    productItem += '<div class="product-image">';
-                    productItem += '<img src="/images/img_product_dummy.jpg">';
-                    productItem += '</div>';
-                    productItem += '<div class="product-body">';
-                    productItem += '<h6 class="product-category">커피</h6>';
-                    productItem += '<h4 class="product-title">딸기크림라떼 (ICED)</h4>';
-                    productItem += '<p class="product-price">3,500원 <s>4,000원</s></p>';
-                    productItem += '</div>';
-                    productItem += '</a>';
-                    productItem += '</li>';
-                    $('.product-list ul').append(productItem);
-                    $('.product-list ul').append(productItem);
-                    $('.product-list ul').append(productItem);
-                    $('.product-list ul').append(productItem);
-                    $('.product-list ul').append(productItem);
+                if ($(window).outerHeight() < $(document).height()) {
+                    if ($(window).outerHeight() + Math.ceil($(window).scrollTop()) >= $(document).height()) {
+                        var productItem = '<li>';
+                        productItem += '<a class="product-item" href="product_details.html">';
+                        productItem += '<div class="product-image">';
+                        productItem += '<img src="/images/img_product_dummy.jpg">';
+                        productItem += '</div>';
+                        productItem += '<div class="product-body">';
+                        productItem += '<h6 class="product-category">커피</h6>';
+                        productItem += '<h4 class="product-title">딸기크림라떼 (ICED)</h4>';
+                        productItem += '<p class="product-price">3,500원 <s>4,000원</s></p>';
+                        productItem += '</div>';
+                        productItem += '</a>';
+                        productItem += '</li>';
+                        $('.product-list ul').append(productItem);
+                        $('.product-list ul').append(productItem);
+                        $('.product-list ul').append(productItem);
+                        $('.product-list ul').append(productItem);
+                        $('.product-list ul').append(productItem);
+                    }
                 }
             });
 

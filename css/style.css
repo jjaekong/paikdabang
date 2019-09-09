@@ -457,6 +457,9 @@
   color: #003da6;
   box-shadow: none;
 }
+#main.product-details .details .details-summary .details-body {
+  padding: 6.9444444444vw 8.3333333333vw !important;
+}
 #main.product-details .details .details-image img {
   width: 100%;
 }

@@ -495,6 +495,11 @@
         }
     }
     .details {
+        .details-summary {
+            .details-body {
+                padding: vw(50px) vw(60px) !important;
+            }
+        }
         .details-image {
             img { width: 100%; }
         }

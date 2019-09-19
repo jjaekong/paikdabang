@@ -541,33 +541,43 @@
                 color: #666;
                 font-size: vw(24px);
                 line-height: vw(32px);
-                b {
-                    line-height: vw(36px);
-                }
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    margin-bottom: vw(34px);
-                    li {
-                        position: relative;
-                        padding-left: vw(12px);
-                        &:before {
-                            content: '-';
-                            position: absolute;
-                            left: 0;
-                        }
-                        & + li {
-                            margin-top: vw(6px);
-                        }
-                    }
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
+//                 b {
+//                     line-height: vw(36px);
+//                 }
+//                 ul {
+//                     list-style: none;
+//                     padding: 0;
+//                     margin-bottom: vw(34px);
+//                     li {
+//                         position: relative;
+//                         padding-left: vw(12px);
+//                         &:before {
+//                             content: '-';
+//                             position: absolute;
+//                             left: 0;
+//                         }
+//                         & + li {
+//                             margin-top: vw(6px);
+//                         }
+//                     }
+//                     &:last-child {
+//                         margin-bottom: 0;
+//                     }
+//                 }
+//                 p {
+//                     margin-bottom: vw(42px);
+//                     &:last-child {
+//                         margin-bottom: 0;
+//                     }
+//                 }
                 p {
-                    margin-bottom: vw(42px);
-                    &:last-child {
-                        margin-bottom: 0;
+                    position: relative;
+                    padding-left: vw(12px);
+                    margin-bottom: 0;
+                    &:before {
+                        content: '-';
+                        position: absolute;
+                        left: 0;
                     }
                 }
             }

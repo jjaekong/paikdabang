@@ -3,7 +3,8 @@
 /* 메인 페이지 관련 */
 #main.main {
     position: relative;
-    height: calc(100% - 17.2222222222vw);
+    // height: calc(100% - 62px); 124
+    height: calc(100% - 62px);
     padding-top: 48px;
     .tab-content {
         position: relative;
@@ -111,7 +112,8 @@
         .category-list {
             overflow: auto;
             position: relative;
-            height: calc(100% - 11.6666666667vw);
+            // height: calc(100% - 11.6666666667vw); 42
+            height: calc(100% - 42px);
             ul {
                 position: relative;
                 overflow: hidden;
@@ -152,6 +154,7 @@
                         span {
                             font-size: 12px;
                             color: #333;
+                            text-align: center;
                         }
                     }
                 }
@@ -177,14 +180,14 @@
 #main.voucher {
     padding-top: 78px;
     .no-data {
-        height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw - 13.3333333333vw);
+        height: calc(100% - 62px - 30px - 30px - 40px - 62px - 48px);
     }
 }
 
 #main.recommend {
     padding-top: 30px;
     .no-data {
-        height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw);
+        height: calc(100% - 62px - 30px - 30px - 40px - 62px);
     }
 }
 
@@ -386,9 +389,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100px;
-        padding-left: 30px;
-        padding-right: 30px;
+//         height: 100px;
+//         padding-left: 30px;
+//         padding-right: 30px;
+        padding: 30px;
         font-size: 12px;
         line-height: 18px;
         color: #666;
@@ -419,6 +423,24 @@
         .terms {
             display: flex;
             align-items: center;
+        }
+        dl {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            dt, dd {
+                margin: 0;
+                font-weight: normal;
+            }
+            dt {
+                &:after {
+                    margin-right: 3px;
+                    content: ':';
+                }
+            }
+        }
+        address {
+            margin: 0;
         }
     }
     .action {
@@ -1138,7 +1160,7 @@
 .history {
     padding-top: 30px;
     .no-data {
-        height: calc(100% - 17.2222222222vw - 8.3333333333vw - 8.3333333333vw - 11.1111111111vw - 17.2222222222vw);
+        height: calc(100% - 62px - 30px - 30px - 40px - 62px);
     }
     .history-list {
         ul {
@@ -1424,6 +1446,24 @@
         .terms {
             display: flex;
             align-items: center;
+        }
+        dl {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            dt, dd {
+                margin: 0;
+                font-weight: normal;
+            }
+            dt {
+                &:after {
+                    margin-right: 3px;
+                    content: ':';
+                }
+            }
+        }
+        address {
+            margin: 0;
         }
     }
     .action {

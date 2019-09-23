@@ -7,10 +7,15 @@ html, body {
     padding: 0;
 }
 
+html {
+    border: 2px solid orange;
+}
+
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: vw(26px);
+    font-size: 13px;
     background: transparent;
+    border: 2px solid skyblue;
 }
 
 body.loading {
@@ -22,17 +27,17 @@ body.loading {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     display: flex;
     align-items: center;
     background: $kc;
     color: #fff;
-    height: vw(124px);
-    padding-left: vw(25px);
-    padding-right: vw(25px);
+    width: 100%;
+    height: 62px;
+    padding-left: 15px;
+    padding-right: 15px;
     h1 {
         margin-bottom: 0;
-        font-size: vw(32px);
+        font-size: 16px;
         flex: 1;
         text-align: center;
     }
@@ -40,8 +45,8 @@ body.loading {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: vw(64px);
-        height: vw(64px);
+        width: 32px !important;
+        height: 32px !important;
         border: 0;
         padding: 0;
         outline: 0;
@@ -64,7 +69,7 @@ body.loading {
         }
     }
     & + #main {
-        margin-top: vw(124px);
+        margin-top: 62px;
     }
 }
 
@@ -72,9 +77,9 @@ body.loading {
     .tabs {
         z-index: 1005;
         position: fixed;
-        top: vw(124px);
+        top: 62px;
         width: 100%;
-        height: vw(96px);
+        height: 48px;
         li {
             flex: 1;
             a {
@@ -85,13 +90,13 @@ body.loading {
                 padding: 0;
                 border: 0;
                 text-align: center;
-                font-size: vw(28px);
+                font-size: 14px;
                 color: #666;
                 background: #fff;
-                border-bottom: vw(2px) solid #e9e9e9;
+                border-bottom: 1px solid #e9e9e9;
                 border-radius: 0;
                 &.active {
-                    border-bottom: vw(4px) solid $kc;
+                    border-bottom: 2px solid $kc;
                     color: $kc;
                     font-weight: bold;
                 }
@@ -103,68 +108,75 @@ body.loading {
         display: block;
         overflow: hidden;
         text-decoration: none;
-        border-radius: vw(35px);
+        // border-radius: vw(35px);
+        border-radius: 15px;
         background: #fff;
         .product-body {
-            padding: vw(15px) vw(30px) vw(15px) vw(30px);
-            height: vw(215px);
+            // padding: vw(15px) vw(30px) vw(15px) vw(30px);
+            // height: vw(215px);
+            padding: 8px 15px 8px 15px;
+            height: 108px;
         }
         .product-image {
             display: flex;
             justify-content: center;
-            margin: 0 auto;
-            width: vw(270px);
-            height: vw(170px);
+            align-items: center;
+            // width: vw(270px);
+            // height: vw(170px);
+            width: 135px;
+            height: 85px;
             img {
+                display: block;
+                margin: 0 auto;
                 height: 100%;
             }
         }
         .product-category {
             margin: 0;
-            font-size: vw(20px);
+            font-size: 10px;
             color: #bebebe;
         }
         .product-title {
-            margin: vw(10px) 0 0;
-            font-size: vw(26px);
-            line-height: vw(30px);
-            min-height: vw(60px);
+            margin: 5px 0 0;
+            font-size: 13px;
+            line-height: 15px;
+            min-height: 30px;
             color: #333;
         }
         .product-price {
-            margin: vw(10px) 0 0;
-            font-size: vw(28px);
+            margin: 5px 0 0;
+            font-size: 14px;
             font-weight: bold;
             color: $kc;
             s {
                 color: #b2b2b2;
                 font-weight: normal;
-                font-size: vw(22px);
+                font-size: 11px;
             }
         }
         .flag {
             position: absolute;
             top: 0;
-            right: vw(10px);
+            right: 5px;
         }
     }
     .flag {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: vw(60px);
-        height: vw(60px);
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         background: var(--light);
-        line-height:  vw(22px);
+        line-height:  11px;
         b {
-            font-size: vw(22px);
+            font-size: 11px;
             color: #fff;
         }
         small {
-            margin-right: vw(-5px);
-            margin-left: vw(5px);
-            font-size: vw(14px);
+            margin-right: -2px;
+            margin-left: 2px;
+            font-size: 10px;
             color: rgba(#fff, .6);
             font-weight: 300;
         }
@@ -175,11 +187,11 @@ body.loading {
     .sorter {
         // margin-top: vw(60px);
         z-index: 1001;
-        margin-bottom: vw(60px);
-        margin-left: vw(30px);
-        margin-right: vw(30px);
-        height: vw(80px);
-        border-radius: vw(40px);
+        margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        height: 40px;
+        border-radius: 20px;
         background-color: #fff;
         border: 0;
         li {
@@ -195,11 +207,11 @@ body.loading {
                 height: 100%;
                 border: 0;
                 color: #666;
-                font-size: vw(24px);
+                font-size: 12px;
                 &.active {
                     background: $kc;
                     color: #fff;
-                    border-radius: vw(40px);
+                    border-radius: 20px;
                 }
             }
         }
@@ -207,11 +219,11 @@ body.loading {
     .category-tabs {
         z-index: 10;
         position: fixed;
-        top: vw(124px);
+        top: 62px;
         left: 0;
         overflow: auto;
         width: 100%;
-        height: vw(96px);
+        height: 48px;
         .tabs {
             position: relative;
             top: 0;
@@ -232,8 +244,8 @@ body.loading {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: vw(24px);
-    line-height: vw(36px);
+    font-size: 12px;
+    line-height: 18px;
     color: #666;
 }
 
@@ -249,7 +261,7 @@ div.loading {
     justify-content: center;
     align-items: center;
     img {
-        width: vw(130px);
-        height: vw(130px);
+        width: 65px;
+        height: 65px;
     }
 }

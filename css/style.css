@@ -1172,6 +1172,9 @@
   color: #999;
   font-weight: 900;
 }
+.history .history-item .history-body .history-category span {
+  color: #003da6;
+}
 .history .history-item .history-body .history-title {
   margin: 0 0 5px 0;
   font-size: 13px;

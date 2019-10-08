@@ -21,6 +21,12 @@
     <script src="/js/common/bootstrap.min.js"></script>
     <!-- //공통 js -->
 
+    <!-- 개발 css -->
+    <style>
+        #main.product-details .price-tag.show { top: 52px !important; } /* 191008: 위치값 추가, 변수 처리 */
+    </style>
+    <!-- // 개발 css -->
+
     <!-- 개발 js -->
     <!-- 주의: 개발에 필요한 js는 이 영역에 작성해 주세요 -->
     <script>
@@ -42,7 +48,7 @@
 <body>
 
     <!-- 공통 헤더 -->
-    <header id="header" style="height: 62px;"><!-- 190923: 높이값 추가, 변수 처리 -->
+    <header id="header" style="height: 52px;"><!-- 190923: 높이값 추가, 변수 처리 -->
         <a class="btn btn-back" href="index.html"><img src="/images/ico_arrow_left.png" alt="뒤로 가기"></a>
         <h1>빽스치노</h1>
         <span class="empty"></span>
@@ -50,7 +56,7 @@
     <!-- //공통 헤더 -->
 
     <!-- 상품상세: product-details 클래스 필요 -->
-    <main id="main" class="product-details">
+    <main id="main" class="product-details" style="margin-top: 52px;"><!-- 191008: 마진값 추가, 변수 처리 -->
 
         <!-- 가격 정보 -->
         <div class="price-tag">

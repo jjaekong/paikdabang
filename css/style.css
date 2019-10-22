@@ -88,6 +88,9 @@
   float: left;
   width: 135px;
 }
+#main.main .product-list li .product-price {
+  top: 160px;
+}
 #main.main #exchange {
   position: relative;
   height: 100%;

@@ -144,7 +144,9 @@ body.loading {
             color: #333;
         }
         .product-price {
-            margin: 5px 0 0;
+            position: absolute;
+            top: 172px;
+            margin: 0;
             font-size: 14px;
             font-weight: bold;
             color: $kc;

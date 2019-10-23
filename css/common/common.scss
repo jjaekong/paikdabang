@@ -137,11 +137,13 @@ body.loading {
             color: #bebebe;
         }
         .product-title {
+            overflow: hidden;
             margin: 5px 0 0;
             font-size: 13px;
             line-height: 15px;
             min-height: 30px;
             color: #333;
+            height: 45px;
         }
         .product-price {
             position: absolute;

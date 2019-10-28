@@ -29,6 +29,16 @@
 
     <!-- 개발 js -->
     <!-- 주의: 개발에 필요한 js는 이 영역에 작성해 주세요 -->
+    <script>
+        (function($) {
+            // 상품고시 정보 클릭 시, 스크롤 이동: 191028 추가
+            $(document).ready(function() {
+                $('#details-notice').on('hidden.bs.collapse shown.bs.collapse', function () {
+                    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() - $('.company').outerHeight() }, 500)
+                })
+            })
+        })(jQuery);
+    </script>
     <!-- // 개발 js -->
 
 </head>

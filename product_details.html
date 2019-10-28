@@ -40,6 +40,13 @@
                     $('.price-tag').removeClass('show');
                 }
             });
+            
+            // 상품고시 정보 클릭 시, 스크롤 이동
+            $(document).ready(function() {
+                $('#details-info, #details-notice').on('hidden.bs.collapse shown.bs.collapse', function () {
+                    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() - $('.company').outerHeight() }, 500)
+                })
+            })
         })(jQuery);
     </script>
     <!-- // 개발 js -->
@@ -195,6 +202,12 @@
         <!-- //하단 버튼 영역 -->
 
     </main>
+
+    <script>
+        (function($) {
+            
+        })(jQuery);
+    </script>
 
 </body>
 </html>

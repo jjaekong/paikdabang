@@ -200,7 +200,7 @@
 #main.recommend .product-list li,
 #main.promotion .product-list li,
 #main.voucher .product-list li {
-  padding: 8px;
+  padding: 2px;
   width: 50%;
 }
 #main.recommend .product-list li .product-item,

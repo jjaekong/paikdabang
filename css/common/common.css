@@ -205,6 +205,10 @@ body.loading {
   overflow: auto;
   width: 100%;
   height: 48px;
+  -ms-overflow-style: none;
+}
+#main .category-tabs::-webkit-scrollbar {
+  display: none;
 }
 #main .category-tabs .tabs {
   position: relative;

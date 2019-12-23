@@ -231,6 +231,10 @@ body.loading {
         overflow: auto;
         width: 100%;
         height: 48px;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display:none;
+        }
         .tabs {
             position: relative;
             top: 0;

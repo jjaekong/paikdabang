@@ -276,14 +276,14 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 35px;
-  height: 35px;
+  width: 70px;
+  height: 70px;
 }
 #main.product-details .coupon .coupon-wrapper .flag b {
-  font-size: 14px;
+  font-size: 18px;
 }
-#main.product-details .coupon .coupon-wrapper .flag small {
-  font-size: 10px;
+#main.product-details .coupon .coupon-wrapper .flag b small {
+  font-size: 14px;
 }
 #main.product-details .coupon .coupon-info {
   padding: 18px;

@@ -71,6 +71,10 @@
             <li><a href="#invalid-number" data-toggle="modal">결제하기 유효성 체크 - 휴대폰 번호 체계 미일치</a></li>
             <li><a href="#message-not-entered" data-toggle="modal">결제하기 유효성 체크 - 메시지 미입력</a></li>
             <li><a href="#complete-gift" data-toggle="modal">선물 완료</a></li>
+
+            <li><a href="#purchase-limit" data-toggle="modal">구매금액 제한 안내</a></li>
+            <li><a href="#purchased-limit-exceeded" data-toggle="modal">쿠폰 구매금액 한도 초과</a></li>
+            <li><a href="#received-limit-exceeded" data-toggle="modal">쿠폰 수신금액 한도 초과</a></li>
         </ol>
 
         <h6 class="mt-4">구매내역 - 구매내역 상세</h6>
@@ -97,6 +101,87 @@
         </ol>
 
     </main>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="purchase-limit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-header">
+                            <h5>구매금액 제한 안내</h5>
+                        </div>
+                        <div class="message-body">
+                            <h6>2020년00월00일부터 빽다방 기프티콘 구매금액이 아래와 같이 제한됩니다. (취소 건 제외)</h6>
+                            <p>
+                                - 쿠폰 구매자 기준 <b>일별</b> 최대 10만원<br>
+                                - 쿠폰 수신자 기준 <b>월별</b> 최대 50만원
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="purchased-limit-exceeded">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-header">
+                            <h5>쿠폰 구매금액 한도 초과</h5>
+                        </div>
+                        <div class="message-body">
+                            <h6>고객님께서 구매 가능한 금액 한도를 확인해주세요.</h6>
+                            <p>
+                                - 오늘 구매 한도 100,000원 중 99,000원 사용<br>
+                                - 오늘 구매 잔여한도 1,000원
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal alert-modal" tabindex="-1" role="dialog" id="received-limit-exceeded">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-header">
+                            <h5>쿠폰 구매금액 한도 초과</h5>
+                        </div>
+                        <div class="message-body">
+                            <h6>000-0000-0000 번호로 수신 가능한 쿠폰 금액 한도를 확인해주세요.</h6>
+                            <p>
+                                - 이번 달 쿠폰 수신 한도 500,000원 중 499,000원 사용<br>
+                                - 이번 달 쿠폰 수신 잔여한도 1,000원
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ok" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal alert-modal" tabindex="-1" role="dialog" id="linking-member-error">
         <div class="modal-dialog" role="document">

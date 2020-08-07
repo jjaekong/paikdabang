@@ -79,25 +79,49 @@
             <div class="coupon-wrapper">
                 <div class="coupon-info">
                     <div class="coupon-image">
-                        <img src="/images/img_product_dummy2.jpg">
+                        <img src="/images/img_voucher_paikdabang_640.jpg">
                     </div>
-                    <h4 class="coupon-title">베리크런치 빽스치노 (SOFT)</h4>
+                    <!-- <h4 class="coupon-title">베리크런치 빽스치노 (SOFT)</h4>
                     <p class="coupon-price">4,100원 <s>4,500원</s></p>
-                    <p class="coupon-help">발행일로부터 93일 내 사용 가능합니다.</p>
+                    <p class="coupon-help">발행일로부터 93일 내 사용 가능합니다.</p> -->
+                </div>
+                <!-- 금액권 일 경우 -->
+                <div class="coupon-type">
+                    <div class="coupon-type-wrapper">
+                        <h6>금액선택</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="coupon-type-item selected"><!-- span class="discount">10%</span --><span class="price">5,000원</span></a></li>
+                            <li><a href="#" class="coupon-type-item"><!-- span class="discount">10%</span--><span class="price">10,000원</span></a></li>
+                            <li><a href="#" class="coupon-type-item"><span class="price">30,000원</span></a></li>
+                            <li><a href="#" class="coupon-type-item"><span class="price">50,000원</span></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- 플래그 -->
-                <div class="flag pink">
+                <!-- <div class="flag pink"> -->
                     <!-- 할인율 일 경우 -->
-                    <b>10<small>%</small></b>
+                    <!-- <b>10<small>%</small></b> -->
                     <!-- 텍스트 일 경우 -->
                     <!-- <b style="font-size: 14px;">구매완료</b> -->
-                </div>
+                <!-- </div> -->
             </div>
         </section>
         <!-- //쿠폰 영역 -->
         
         <!-- 상세 설명 -->
         <section class="details">
+
+            <!-- 금액권 선물금액/결제금액 -->
+            <!-- <div class="details-price">
+                <dl class="mb-0">
+                    <dt>선물금액</dt>
+                    <dd class="mb-0"><s>5,000원</s></dd>
+                </dl>
+                <dl class="mb-0">
+                    <dt>결제금액</dt>
+                    <dd class="mb-0"><span class="discount">10% 할인</span><b>5,000원</b></dd>
+                </dl>
+            </div> -->
 
             <!-- 상품 정보 -->
             <div class="details-desc details-info">
@@ -208,7 +232,11 @@
 
     <script>
         (function($) {
-            
+            $(document).on("click", ".coupon-type .coupon-type-item", function(e) {
+                e.preventDefault()
+                $('.coupon-type-item').removeClass('selected')
+                $(this).addClass('selected')
+            })
         })(jQuery);
     </script>
 

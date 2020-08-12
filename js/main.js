@@ -5,21 +5,23 @@
 
     $('#exchange-tab').on('shown.bs.tab', function (e) {
         if (!exchangeSwiper || exchangeSwiper.destroyed) {
-            exchangeSwiper = new Swiper ('#exchange .top-banner.swiper-container', {
-                loop: true,
-                initialSlide: exchangeSwiperIndex,
-                autoplay: {
-                    delay: 3000,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                on: {
-                    slideChange: function() {
-                        exchangeSwiperIndex = this.realIndex
+            if ($('#exchange .swiper-container .swiper-slide').length > 1) {
+                exchangeSwiper = new Swiper ('#exchange .top-banner.swiper-container', {
+                    loop: true,
+                    initialSlide: exchangeSwiperIndex,
+                    autoplay: {
+                        delay: 3000,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    on: {
+                        slideChange: function() {
+                            exchangeSwiperIndex = this.realIndex
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     });
 
@@ -31,21 +33,23 @@
 
     $('#voucher-tab').on('shown.bs.tab', function (e) {
         if (!voucherSwiper || voucherSwiper.destroyed) {
-            voucherSwiper = new Swiper ('#voucher .swiper-container', {
-                loop: true,
-                initialSlide: voucherSwiperIndex,
-                autoplay: {
-                    delay: 3000,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                on: {
-                    slideChange: function() {
-                        voucherSwiperIndex = this.realIndex
+            if ($('#voucher .swiper-container .swiper-slide').length > 1) {
+                voucherSwiper = new Swiper ('#voucher .swiper-container', {
+                    // loop: true,
+                    initialSlide: voucherSwiperIndex,
+                    autoplay: {
+                        delay: 3000,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    on: {
+                        slideChange: function() {
+                            voucherSwiperIndex = this.realIndex
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     });
 

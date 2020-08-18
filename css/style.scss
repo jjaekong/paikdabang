@@ -253,6 +253,26 @@
             }
         }
     }
+}
+
+#main.voucher {
+    .voucher-list {
+        padding-left: calc(86px / 2);
+        padding-right: calc(86px / 2);
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                padding-top: calc(25px / 2);
+                padding-bottom: calc(25px / 2);
+            }
+        }
+        .voucher-item {
+            img {
+                width: 100%;
+            }
+        }
+    }
     #category-list {
         background: rgba(#000, .6);
         .modal-header {
@@ -283,26 +303,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-#main.voucher {
-    .voucher-list {
-        padding-left: calc(86px / 2);
-        padding-right: calc(86px / 2);
-        ul {
-            list-style: none;
-            padding: 0;
-            li {
-                padding-top: calc(25px / 2);
-                padding-bottom: calc(25px / 2);
-            }
-        }
-        .voucher-item {
-            img {
-                width: 100%;
             }
         }
     }
@@ -412,17 +412,27 @@
                     padding: calc(10px / 2);
                     width: 50%;
                     .coupon-type-item {
+                        position: relative;
                         padding: calc(6px / 2);
                         display: flex;
                         align-items: center;
                         border: 1px solid #e9e9e9;
-                        height: calc(55px / 2);
+                        height: calc(52px / 2);
                         color: #333;
                         text-decoration: none;
+                        padding-left: calc(60px / 2);
+                        padding-right: calc(60px / 2);
                         &.selected {
-                            border: 1px solid #333;
+                            border: 2px solid #003da6;
+                            .discount {
+                                top: 1px;
+                                left: 1px;
+                            }
                         }
                         .discount {
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
                             // margin-right: calc(6px / 2);
                             width: calc(60px / 2);
                             height: calc(40px / 2);

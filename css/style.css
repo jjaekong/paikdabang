@@ -222,39 +222,6 @@
   top: 5px;
   right: 5px;
 }
-#main.recommend #category-list,
-#main.promotion #category-list {
-  background: rgba(0, 0, 0, 0.6);
-}
-#main.recommend #category-list .modal-header .modal-title,
-#main.promotion #category-list .modal-header .modal-title {
-  font-size: 16px;
-}
-#main.recommend #category-list .modal-body ul,
-#main.promotion #category-list .modal-body ul {
-  list-style: none;
-  padding: 0 15px;
-  margin: 0;
-}
-#main.recommend #category-list .modal-body ul li + li,
-#main.promotion #category-list .modal-body ul li + li {
-  border-top: 1px solid #e9e9e9;
-}
-#main.recommend #category-list .modal-body ul li a,
-#main.promotion #category-list .modal-body ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 64px;
-  font-size: 16px;
-  color: #333;
-  text-decoration: none;
-}
-#main.recommend #category-list .modal-body ul li a.active,
-#main.promotion #category-list .modal-body ul li a.active {
-  font-weight: bold;
-  color: #003da6;
-}
 
 #main.voucher .voucher-list {
   padding-left: calc(86px / 2);
@@ -270,6 +237,33 @@
 }
 #main.voucher .voucher-list .voucher-item img {
   width: 100%;
+}
+#main.voucher #category-list {
+  background: rgba(0, 0, 0, 0.6);
+}
+#main.voucher #category-list .modal-header .modal-title {
+  font-size: 16px;
+}
+#main.voucher #category-list .modal-body ul {
+  list-style: none;
+  padding: 0 15px;
+  margin: 0;
+}
+#main.voucher #category-list .modal-body ul li + li {
+  border-top: 1px solid #e9e9e9;
+}
+#main.voucher #category-list .modal-body ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+#main.voucher #category-list .modal-body ul li a.active {
+  font-weight: bold;
+  color: #003da6;
 }
 
 #main.product-details {
@@ -381,18 +375,28 @@
   width: 50%;
 }
 #main.product-details .coupon .coupon-type-wrapper ul li .coupon-type-item {
+  position: relative;
   padding: calc(6px / 2);
   display: flex;
   align-items: center;
   border: 1px solid #e9e9e9;
-  height: calc(55px / 2);
+  height: calc(52px / 2);
   color: #333;
   text-decoration: none;
+  padding-left: calc(60px / 2);
+  padding-right: calc(60px / 2);
 }
 #main.product-details .coupon .coupon-type-wrapper ul li .coupon-type-item.selected {
-  border: 1px solid #333;
+  border: 2px solid #003da6;
+}
+#main.product-details .coupon .coupon-type-wrapper ul li .coupon-type-item.selected .discount {
+  top: 1px;
+  left: 1px;
 }
 #main.product-details .coupon .coupon-type-wrapper ul li .coupon-type-item .discount {
+  position: absolute;
+  top: 2px;
+  left: 2px;
   width: calc(60px / 2);
   height: calc(40px / 2);
   background: #ffe300;
